@@ -1,0 +1,53 @@
+atomate2.common.flows.defect
+============================
+
+.. automodule:: atomate2.common.flows.defect
+
+   
+
+
+
+   
+
+
+
+   
+
+
+
+   
+      
+   
+   
+      
+   
+   
+      
+   
+   
+   
+   
+   
+   
+   
+
+
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      ConfigurationCoordinateMaker
+      DEFAULT_DISTORTIONS
+      FormationEnergyMaker
+
+
+
+
+   
+   
+   
+
+
+

@@ -4,50 +4,58 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Installation &#8212; atomate2</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/autodoc_pydantic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/github.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -55,1317 +63,890 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user/install';</script>
     <link rel="canonical" href="https://materialsproject.github.io/atomate2/user/install.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Running Workflows" href="running-workflows.html" />
     <link rel="prev" title="Introduction" href="index.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="light">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">atomate2</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  User Guide
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="index.html">
-   Introduction
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Installation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="running-workflows.html">
-   Running Workflows
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="fireworks.html">
-   Using atomate2 with FireWorks
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="codes/index.html">
-   Codes
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="codes/vasp.html">
-     VASP
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Reference
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../reference/index.html">
-   API reference
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../reference/atomate2.amset.html">
-     atomate2.amset
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.amset.files.html">
-       atomate2.amset.files
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-      <label for="toctree-checkbox-4">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.amset.files.copy_amset_files.html">
-         copy_amset_files
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.amset.files.write_amset_settings.html">
-         write_amset_settings
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.amset.jobs.html">
-       atomate2.amset.jobs
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-      <label for="toctree-checkbox-5">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.amset.jobs.AmsetMaker.html">
-         AmsetMaker
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.amset.run.html">
-       atomate2.amset.run
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-      <label for="toctree-checkbox-6">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.amset.run.check_converged.html">
-         check_converged
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.amset.run.run_amset.html">
-         run_amset
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.amset.run.tensor_average.html">
-         tensor_average
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.amset.schemas.html">
-       atomate2.amset.schemas
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-      <label for="toctree-checkbox-7">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.amset.schemas.AmsetTaskDocument.html">
-         AmsetTaskDocument
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.amset.schemas.MeshData.html">
-         MeshData
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.amset.schemas.TransportData.html">
-         TransportData
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.amset.schemas.UsageStats.html">
-         UsageStats
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.amset.schemas.amset.html">
-         amset
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../reference/atomate2.common.html">
-     atomate2.common
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.common.analysis.html">
-       atomate2.common.analysis
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-      <label for="toctree-checkbox-9">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.analysis.elastic.html">
-         atomate2.common.analysis.elastic
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.common.files.html">
-       atomate2.common.files
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-      <label for="toctree-checkbox-10">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.files.copy_files.html">
-         copy_files
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.files.delete_files.html">
-         delete_files
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.files.find_and_filter_files.html">
-         find_and_filter_files
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.files.get_zfile.html">
-         get_zfile
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.files.gunzip_files.html">
-         gunzip_files
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.files.gzip_files.html">
-         gzip_files
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.files.rename_files.html">
-         rename_files
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.common.jobs.html">
-       atomate2.common.jobs
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-      <label for="toctree-checkbox-11">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.jobs.structure_to_conventional.html">
-         structure_to_conventional
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.jobs.structure_to_primitive.html">
-         structure_to_primitive
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.common.schemas.html">
-       atomate2.common.schemas
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-      <label for="toctree-checkbox-12">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.schemas.cclib.html">
-         atomate2.common.schemas.cclib
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.schemas.elastic.html">
-         atomate2.common.schemas.elastic
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.schemas.math.html">
-         atomate2.common.schemas.math
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.schemas.molecule.html">
-         atomate2.common.schemas.molecule
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.schemas.structure.html">
-         atomate2.common.schemas.structure
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.common.schemas.symmetry.html">
-         atomate2.common.schemas.symmetry
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../reference/atomate2.settings.html">
-     atomate2.settings
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../reference/atomate2.settings.Atomate2Settings.html">
-       Atomate2Settings
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../reference/atomate2.utils.html">
-     atomate2.utils
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.utils.datetime.html">
-       atomate2.utils.datetime
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-      <label for="toctree-checkbox-15">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.utils.datetime.datetime_str.html">
-         datetime_str
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.utils.file_client.html">
-       atomate2.utils.file_client
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-      <label for="toctree-checkbox-16">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.utils.file_client.auto_fileclient.html">
-         auto_fileclient
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.utils.file_client.get_ssh_connection.html">
-         get_ssh_connection
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.utils.file_client.FileClient.html">
-         FileClient
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.utils.log.html">
-       atomate2.utils.log
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-      <label for="toctree-checkbox-17">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.utils.log.initialize_logger.html">
-         initialize_logger
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.utils.path.html">
-       atomate2.utils.path
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-      <label for="toctree-checkbox-18">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.utils.path.find_recent_logfile.html">
-         find_recent_logfile
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.utils.path.get_uri.html">
-         get_uri
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.utils.path.strip_hostname.html">
-         strip_hostname
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../reference/atomate2.vasp.html">
-     atomate2.vasp
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-    <label for="toctree-checkbox-19">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.vasp.builders.html">
-       atomate2.vasp.builders
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-      <label for="toctree-checkbox-20">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.builders.elastic.html">
-         atomate2.vasp.builders.elastic
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.vasp.drones.html">
-       atomate2.vasp.drones
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
-      <label for="toctree-checkbox-21">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.drones.VaspDrone.html">
-         VaspDrone
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.vasp.files.html">
-       atomate2.vasp.files
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
-      <label for="toctree-checkbox-22">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.files.copy_vasp_outputs.html">
-         copy_vasp_outputs
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.files.get_largest_relax_extension.html">
-         get_largest_relax_extension
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.files.write_vasp_input_set.html">
-         write_vasp_input_set
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.vasp.flows.html">
-       atomate2.vasp.flows
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
-      <label for="toctree-checkbox-23">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.flows.amset.html">
-         atomate2.vasp.flows.amset
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.flows.core.html">
-         atomate2.vasp.flows.core
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.flows.defect.html">
-         atomate2.vasp.flows.defect
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.flows.elastic.html">
-         atomate2.vasp.flows.elastic
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.flows.elph.html">
-         atomate2.vasp.flows.elph
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.flows.phonons.html">
-         atomate2.vasp.flows.phonons
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.vasp.jobs.html">
-       atomate2.vasp.jobs
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
-      <label for="toctree-checkbox-24">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.jobs.amset.html">
-         atomate2.vasp.jobs.amset
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.jobs.base.html">
-         atomate2.vasp.jobs.base
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.jobs.core.html">
-         atomate2.vasp.jobs.core
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.jobs.defect.html">
-         atomate2.vasp.jobs.defect
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.jobs.elastic.html">
-         atomate2.vasp.jobs.elastic
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.jobs.elph.html">
-         atomate2.vasp.jobs.elph
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.jobs.phonons.html">
-         atomate2.vasp.jobs.phonons
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.vasp.powerups.html">
-       atomate2.vasp.powerups
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
-      <label for="toctree-checkbox-25">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.powerups.update_user_incar_settings.html">
-         update_user_incar_settings
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.powerups.update_user_kpoints_settings.html">
-         update_user_kpoints_settings
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.powerups.update_user_potcar_functional.html">
-         update_user_potcar_functional
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.powerups.update_user_potcar_settings.html">
-         update_user_potcar_settings
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.powerups.use_auto_ispin.html">
-         use_auto_ispin
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.vasp.run.html">
-       atomate2.vasp.run
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
-      <label for="toctree-checkbox-26">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.run.run_vasp.html">
-         run_vasp
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.run.should_stop_children.html">
-         should_stop_children
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.run.JobType.html">
-         JobType
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.vasp.schemas.html">
-       atomate2.vasp.schemas
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/>
-      <label for="toctree-checkbox-27">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.schemas.calc_types.html">
-         atomate2.vasp.schemas.calc_types
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.schemas.calculation.html">
-         atomate2.vasp.schemas.calculation
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.schemas.defect.html">
-         atomate2.vasp.schemas.defect
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.schemas.elph.html">
-         atomate2.vasp.schemas.elph
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.schemas.phonons.html">
-         atomate2.vasp.schemas.phonons
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.schemas.task.html">
-         atomate2.vasp.schemas.task
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../reference/atomate2.vasp.sets.html">
-       atomate2.vasp.sets
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/>
-      <label for="toctree-checkbox-28">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.sets.base.html">
-         atomate2.vasp.sets.base
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.sets.core.html">
-         atomate2.vasp.sets.core
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../reference/atomate2.vasp.sets.defect.html">
-         atomate2.vasp.sets.defect
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Developer Guide
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../dev/dev_install.html">
-   Developer Installation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../dev/vasp_tests.html">
-   Writing VASP Tests
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  About
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/changelog.html">
-   Change log
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/contributors.html">
-   Contributors
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/contributing.html">
-   Contributing to atomate2
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about/license.html">
-   License
-  </a>
- </li>
-</ul>
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
 
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  </div>
 
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
     
-    <div class="header-article row sticky-top noprint">
+    
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">atomate2</p>
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
         
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="running-workflows.html">
+                        Running Workflows
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="fireworks.html">
+                        Using atomate2 with FireWorks
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="codes/index.html">
+                        Codes
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../reference/index.html">
+                        API reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../dev/dev_install.html">
+                        Developer Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../dev/vasp_tests.html">
+                        Writing VASP Tests
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/changelog.html">
+                        Change log
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/contributing.html">
+                        Contributing to atomate2
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/license.html">
+                        License
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="running-workflows.html">
+                        Running Workflows
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="fireworks.html">
+                        Using atomate2 with FireWorks
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="codes/index.html">
+                        Codes
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../reference/index.html">
+                        API reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../dev/dev_install.html">
+                        Developer Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../dev/vasp_tests.html">
+                        Writing VASP Tests
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/changelog.html">
+                        Change log
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/contributing.html">
+                        Contributing to atomate2
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about/license.html">
+                        License
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">atomate2</p>
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running-workflows.html">Running Workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fireworks.html">Using atomate2 with FireWorks</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="codes/index.html">Codes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="codes/vasp.html">VASP</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../reference/index.html">API reference</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/atomate2.amset.html">atomate2.amset</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.amset.files.html">atomate2.amset.files</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.amset.files.copy_amset_files.html">copy_amset_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.amset.files.write_amset_settings.html">write_amset_settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.amset.jobs.html">atomate2.amset.jobs</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.amset.jobs.AmsetMaker.html">AmsetMaker</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.amset.run.html">atomate2.amset.run</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.amset.run.check_converged.html">check_converged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.amset.run.run_amset.html">run_amset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.amset.run.tensor_average.html">tensor_average</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.amset.schemas.html">atomate2.amset.schemas</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.amset.schemas.AmsetTaskDocument.html">AmsetTaskDocument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.amset.schemas.MeshData.html">MeshData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.amset.schemas.TransportData.html">TransportData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.amset.schemas.UsageStats.html">UsageStats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.amset.schemas.amset.html">amset</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/atomate2.common.html">atomate2.common</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.common.analysis.html">atomate2.common.analysis</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.analysis.elastic.html">atomate2.common.analysis.elastic</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.common.files.html">atomate2.common.files</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.files.copy_files.html">copy_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.files.delete_files.html">delete_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.files.find_and_filter_files.html">find_and_filter_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.files.get_zfile.html">get_zfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.files.gunzip_files.html">gunzip_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.files.gzip_files.html">gzip_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.files.rename_files.html">rename_files</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.common.flows.html">atomate2.common.flows</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.flows.defect.html">atomate2.common.flows.defect</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.common.jobs.html">atomate2.common.jobs</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.jobs.defect.html">atomate2.common.jobs.defect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.jobs.utils.html">atomate2.common.jobs.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.common.schemas.html">atomate2.common.schemas</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.schemas.cclib.html">atomate2.common.schemas.cclib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.schemas.defects.html">atomate2.common.schemas.defects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.schemas.elastic.html">atomate2.common.schemas.elastic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.schemas.math.html">atomate2.common.schemas.math</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.schemas.molecule.html">atomate2.common.schemas.molecule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.schemas.structure.html">atomate2.common.schemas.structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.common.schemas.symmetry.html">atomate2.common.schemas.symmetry</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/atomate2.settings.html">atomate2.settings</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reference/atomate2.settings.Atomate2Settings.html">Atomate2Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/atomate2.utils.html">atomate2.utils</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.utils.datetime.html">atomate2.utils.datetime</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.utils.datetime.datetime_str.html">datetime_str</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.utils.file_client.html">atomate2.utils.file_client</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.utils.file_client.auto_fileclient.html">auto_fileclient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.utils.file_client.get_ssh_connection.html">get_ssh_connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.utils.file_client.FileClient.html">FileClient</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.utils.log.html">atomate2.utils.log</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.utils.log.initialize_logger.html">initialize_logger</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.utils.path.html">atomate2.utils.path</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.utils.path.find_recent_logfile.html">find_recent_logfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.utils.path.get_uri.html">get_uri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.utils.path.strip_hostname.html">strip_hostname</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../reference/atomate2.vasp.html">atomate2.vasp</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.vasp.builders.html">atomate2.vasp.builders</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.builders.elastic.html">atomate2.vasp.builders.elastic</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.vasp.drones.html">atomate2.vasp.drones</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.drones.VaspDrone.html">VaspDrone</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.vasp.files.html">atomate2.vasp.files</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.files.copy_vasp_outputs.html">copy_vasp_outputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.files.get_largest_relax_extension.html">get_largest_relax_extension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.files.write_vasp_input_set.html">write_vasp_input_set</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.vasp.flows.html">atomate2.vasp.flows</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.flows.amset.html">atomate2.vasp.flows.amset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.flows.core.html">atomate2.vasp.flows.core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.flows.defect.html">atomate2.vasp.flows.defect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.flows.elastic.html">atomate2.vasp.flows.elastic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.flows.elph.html">atomate2.vasp.flows.elph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.flows.phonons.html">atomate2.vasp.flows.phonons</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.vasp.jobs.html">atomate2.vasp.jobs</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.jobs.amset.html">atomate2.vasp.jobs.amset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.jobs.base.html">atomate2.vasp.jobs.base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.jobs.core.html">atomate2.vasp.jobs.core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.jobs.defect.html">atomate2.vasp.jobs.defect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.jobs.elastic.html">atomate2.vasp.jobs.elastic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.jobs.elph.html">atomate2.vasp.jobs.elph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.jobs.phonons.html">atomate2.vasp.jobs.phonons</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.vasp.powerups.html">atomate2.vasp.powerups</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.powerups.update_user_incar_settings.html">update_user_incar_settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.powerups.update_user_kpoints_settings.html">update_user_kpoints_settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.powerups.update_user_potcar_functional.html">update_user_potcar_functional</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.powerups.update_user_potcar_settings.html">update_user_potcar_settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.powerups.use_auto_ispin.html">use_auto_ispin</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.vasp.run.html">atomate2.vasp.run</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.run.run_vasp.html">run_vasp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.run.should_stop_children.html">should_stop_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.run.JobType.html">JobType</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.vasp.schemas.html">atomate2.vasp.schemas</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.schemas.calc_types.html">atomate2.vasp.schemas.calc_types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.schemas.calculation.html">atomate2.vasp.schemas.calculation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.schemas.defect.html">atomate2.vasp.schemas.defect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.schemas.elph.html">atomate2.vasp.schemas.elph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.schemas.phonons.html">atomate2.vasp.schemas.phonons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.schemas.task.html">atomate2.vasp.schemas.task</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../reference/atomate2.vasp.sets.html">atomate2.vasp.sets</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.sets.base.html">atomate2.vasp.sets.base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.sets.core.html">atomate2.vasp.sets.core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/atomate2.vasp.sets.defect.html">atomate2.vasp.sets.defect</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../dev/dev_install.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/vasp_tests.html">Writing VASP Tests</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../about/changelog.html">Change log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/contributing.html">Contributing to atomate2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/license.html">License</a></li>
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
 
 
 
 <div class="col py-1 d-flex header-article-main">
     <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
     </div>
     <div class="header-article__right">
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
+  class="btn btn-sm"
   data-toggle="tooltip"
 data-placement="bottom"
 title="Fullscreen mode"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/materialsproject/atomate2"
-   class="headerbtn"
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/materialsproject/atomate2" target="_blank"
+   class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
 title="Source repository"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-<span class="headerbtn__text-container">repository</span>
+<span class="btn__text-container">repository</span>
 </a>
-
-      </li>
+</a>
       
-      <li>
-        <a href="https://github.com/materialsproject/atomate2/issues/new?title=Issue%20on%20page%20%2Fuser/install.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
+      <li><a href="https://github.com/materialsproject/atomate2/issues/new?title=Issue%20on%20page%20%2Fuser/install.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
 title="Open an issue"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-lightbulb"></i>
   </span>
-<span class="headerbtn__text-container">open issue</span>
+<span class="btn__text-container">open issue</span>
 </a>
-
-      </li>
+</a>
       
-      <li>
-        <a href="https://github.com/materialsproject/atomate2/edit/main/docs/user/install.md"
-   class="headerbtn"
+      <li><a href="https://github.com/materialsproject/atomate2/edit/main/docs/user/install.md" target="_blank"
+   class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
 title="Edit this page"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-pencil-alt"></i>
   </span>
-<span class="headerbtn__text-container">suggest edit</span>
+<span class="btn__text-container">suggest edit</span>
 </a>
-
-      </li>
+</a>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/user/install.md"
-   class="headerbtn"
+  <ul class="dropdown-menu">
+      <li><a href="../_sources/user/install.md" target="_blank"
+   class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
 title="Download source file"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="btn__text-container">.md</span>
 </a>
-
-      </li>
+</a>
       
       <li>
-        
 <button onclick="printPdf(this)"
-  class="headerbtn"
+  class="btn btn-sm dropdown-item"
   data-toggle="tooltip"
 data-placement="left"
 title="Print to PDF"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="headerbtn__text-container">.pdf</span>
+<span class="btn__text-container">.pdf</span>
 </button>
-
-      </li>
+</a>
       
-    </ul>
-  </div>
+  </ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
     </div>
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#objectives">
-     Objectives
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installation-checklist">
-     Installation checklist
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vasp">
-     VASP
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mongodb">
-     MongoDB
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-a-directory-scaffold-for-atomate2">
-   Create a directory scaffold for atomate2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-a-conda-environment">
-   Create a conda environment
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-python-packages">
-   Install Python packages
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configure-calculation-output-database">
-   Configure calculation output database
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#jobflow-yaml">
-     jobflow.yaml
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#atomate2-yaml">
-     atomate2.yaml
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#finishing-up">
-     Finishing up
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configure-pymatgen">
-   Configure pymatgen
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pseudopotentials">
-     Pseudopotentials
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#materials-project-api-key">
-     Materials Project API key
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-a-test-workflow">
-   Run a test workflow
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#define-the-workflow">
-     Define the workflow
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#submit-the-workflow">
-     Submit the workflow
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#analyzing-the-results">
-     Analyzing the results
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#next-steps">
-     Next steps
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#troubleshooting-and-faq">
-   Troubleshooting and FAQ
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#my-job-failed">
-     My job failed!
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#i-honestly-tried-everything-i-can-to-solve-my-problem-i-still-need-help">
-     I honestly tried everything I can to solve my problem. I still need help!
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
-</div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Installation</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#objectives">
-     Objectives
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installation-checklist">
-     Installation checklist
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vasp">
-     VASP
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mongodb">
-     MongoDB
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-a-directory-scaffold-for-atomate2">
-   Create a directory scaffold for atomate2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-a-conda-environment">
-   Create a conda environment
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-python-packages">
-   Install Python packages
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configure-calculation-output-database">
-   Configure calculation output database
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#jobflow-yaml">
-     jobflow.yaml
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#atomate2-yaml">
-     atomate2.yaml
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#finishing-up">
-     Finishing up
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#configure-pymatgen">
-   Configure pymatgen
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pseudopotentials">
-     Pseudopotentials
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#materials-project-api-key">
-     Materials Project API key
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-a-test-workflow">
-   Run a test workflow
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#define-the-workflow">
-     Define the workflow
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#submit-the-workflow">
-     Submit the workflow
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#analyzing-the-results">
-     Analyzing the results
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#next-steps">
-     Next steps
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#troubleshooting-and-faq">
-   Troubleshooting and FAQ
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#my-job-failed">
-     My job failed!
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#i-honestly-tried-everything-i-can-to-solve-my-problem-i-still-need-help">
-     I honestly tried everything I can to solve my problem. I still need help!
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
             </div>
-            <main id="main-content" role="main">
-                
-              <div>
-                
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Installation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objectives">
+     Objectives
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installation-checklist">
+     Installation checklist
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vasp">
+     VASP
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mongodb">
+     MongoDB
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-directory-scaffold-for-atomate2">
+   Create a directory scaffold for atomate2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-conda-environment">
+   Create a conda environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-python-packages">
+   Install Python packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-calculation-output-database">
+   Configure calculation output database
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jobflow-yaml">
+     jobflow.yaml
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atomate2-yaml">
+     atomate2.yaml
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finishing-up">
+     Finishing up
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-pymatgen">
+   Configure pymatgen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pseudopotentials">
+     Pseudopotentials
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#materials-project-api-key">
+     Materials Project API key
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-a-test-workflow">
+   Run a test workflow
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#define-the-workflow">
+     Define the workflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submit-the-workflow">
+     Submit the workflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyzing-the-results">
+     Analyzing the results
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#next-steps">
+     Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#troubleshooting-and-faq">
+   Troubleshooting and FAQ
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#my-job-failed">
+     My job failed!
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#i-honestly-tried-everything-i-can-to-solve-my-problem-i-still-need-help">
+     I honestly tried everything I can to solve my problem. I still need help!
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
   <section class="tex2jax_ignore mathjax_ignore" id="installation">
-<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h1>
+<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>This guide will get you up and running in an environment for running high-throughput
 workflows with atomate2. atomate2 is built on the pymatgen, custodian, jobflow, and
 FireWorks libraries. Briefly:</p>
@@ -1382,29 +963,29 @@ troubleshoot if you’re having problems.</p>
 <p>Note that this installation tutorial is VASP-centric since almost all functionality
 currently in atomate2 pertains to VASP.</p>
 <section id="objectives">
-<h3>Objectives<a class="headerlink" href="#objectives" title="Permalink to this headline">#</a></h3>
+<h3>Objectives<a class="headerlink" href="#objectives" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Install and configure atomate2 on your computing cluster.</p></li>
 <li><p>Validate the installation with a test workflow.</p></li>
 </ul>
 </section>
 <section id="installation-checklist">
-<h3>Installation checklist<a class="headerlink" href="#installation-checklist" title="Permalink to this headline">#</a></h3>
+<h3>Installation checklist<a class="headerlink" href="#installation-checklist" title="Permalink to this heading">#</a></h3>
 <p>Completing everything on this checklist should result in a fully functioning
 environment.</p>
-<ol class="simple">
-<li><p><a class="reference external" href="#prerequisites">Prerequisites</a></p></li>
-<li><p><a class="reference external" href="#create-a-directory-scaffold-for-atomate2">Create a directory scaffold</a></p></li>
-<li><p><a class="reference external" href="#create-a-conda-environment">Create a conda environment</a></p></li>
-<li><p><a class="reference external" href="#install-python-packages">Install Python packages</a></p></li>
-<li><p><a class="reference external" href="#configure-calculation-output-database">Configure output database</a></p></li>
-<li><p><a class="reference external" href="#configure-pymatgen">Configure pymatgen</a></p></li>
-<li><p><a class="reference external" href="#run-a-test-workflow">Run a test workflow</a></p></li>
+<ol class="arabic simple">
+<li><p><span class="xref myst">Prerequisites</span></p></li>
+<li><p><span class="xref myst">Create a directory scaffold</span></p></li>
+<li><p><span class="xref myst">Create a conda environment</span></p></li>
+<li><p><span class="xref myst">Install Python packages</span></p></li>
+<li><p><span class="xref myst">Configure output database</span></p></li>
+<li><p><span class="xref myst">Configure pymatgen</span></p></li>
+<li><p><span class="xref myst">Run a test workflow</span></p></li>
 </ol>
 </section>
 </section>
 <section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h2>
 <p>Before you install, you need to make sure that your “worker” computer (where the
 simulations will be run, often a computing cluster) that will execute workflows can
 (i) run the base simulation packages (e.g., VASP, LAMMPS, FEFF, etc) and (ii) connect
@@ -1414,14 +995,14 @@ computing center doesn’t have firewalls that prevent database access. Typicall
 academic computing clusters as well as systems with a MOM-node style architecture
 (e.g., NERSC) are OK.</p>
 <section id="vasp">
-<h3>VASP<a class="headerlink" href="#vasp" title="Permalink to this headline">#</a></h3>
+<h3>VASP<a class="headerlink" href="#vasp" title="Permalink to this heading">#</a></h3>
 <p>To get access to VASP on supercomputing resources typically requires that you’re added
 to a user group on the system you work on after your license is verified. Ensure that
 you have access to the VASP executable and that it is functional before starting this
 tutorial.</p>
 </section>
 <section id="mongodb">
-<h3>MongoDB<a class="headerlink" href="#mongodb" title="Permalink to this headline">#</a></h3>
+<h3>MongoDB<a class="headerlink" href="#mongodb" title="Permalink to this heading">#</a></h3>
 <p><a class="reference external" href="https://docs.mongodb.com/manual/">MongoDB</a> is a NoSQL database that stores each database
 entry as a document, which is represented in the JSON format (the formatting is similar to
 a dictionary in Python). Atomate2 uses MongoDB to:</p>
@@ -1471,11 +1052,11 @@ be kept alive at all times you’re running workflows).</p></li>
 </section>
 </section>
 <section id="create-a-directory-scaffold-for-atomate2">
-<h2>Create a directory scaffold for atomate2<a class="headerlink" href="#create-a-directory-scaffold-for-atomate2" title="Permalink to this headline">#</a></h2>
+<h2>Create a directory scaffold for atomate2<a class="headerlink" href="#create-a-directory-scaffold-for-atomate2" title="Permalink to this heading">#</a></h2>
 <p>Installing atomate2 includes installation of codes, configuration files, and various
 binaries and libraries. Thus, it is useful to create a directory structure that
 organizes all these items.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Log in to the compute cluster and create a directory in a spot on disk that has
 relatively fast access from compute nodes <em>and</em> that is only accessible by yourself
 or your collaborators. Your environment and configuration files will go here,
@@ -1492,7 +1073,7 @@ going to do next. Run <code class="docutils literal notranslate"><span class="pr
 </div>
 </section>
 <section id="create-a-conda-environment">
-<h2>Create a conda environment<a class="headerlink" href="#create-a-conda-environment" title="Permalink to this headline">#</a></h2>
+<h2>Create a conda environment<a class="headerlink" href="#create-a-conda-environment" title="Permalink to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Make sure to create a Python 3.8+ environment as recent versions of atomate2 only
@@ -1513,7 +1094,7 @@ Most clusters (e.g., NESRC) have <a class="reference external" href="https://www
 which provides access to the <code class="docutils literal notranslate"><span class="pre">conda</span></code> binary. If the <code class="docutils literal notranslate"><span class="pre">conda</span></code> tool is not available, you can
 install it by following the installation instructions for
 <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a>. To set up your conda environment:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Create a new conda environment called atomate2 with Python 3.9 using
 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">atomate2</span> <span class="pre">python=3.9</span></code>.</p></li>
 <li><p>Activate your environment by running <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">atomate2</span></code>. Now, when you use
@@ -1525,15 +1106,15 @@ after every log in before you can do work on your atomate project.</p></li>
 </ol>
 </section>
 <section id="install-python-packages">
-<h2>Install Python packages<a class="headerlink" href="#install-python-packages" title="Permalink to this headline">#</a></h2>
+<h2>Install Python packages<a class="headerlink" href="#install-python-packages" title="Permalink to this heading">#</a></h2>
 <p>Next, we will download and install all of the atomate2-related Python packages.</p>
 <p>To install the packages run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install atomate2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>atomate2
 </pre></div>
 </div>
 </section>
 <section id="configure-calculation-output-database">
-<h2>Configure calculation output database<a class="headerlink" href="#configure-calculation-output-database" title="Permalink to this headline">#</a></h2>
+<h2>Configure calculation output database<a class="headerlink" href="#configure-calculation-output-database" title="Permalink to this heading">#</a></h2>
 <p>The next step is to configure your mongoDB database that will be used to store
 calculation outputs.</p>
 <div class="admonition note">
@@ -1550,30 +1131,30 @@ that are unique only to these databases.</p>
 </div>
 <p>Create the following files in <code class="docutils literal notranslate"><span class="pre">&lt;&lt;INSTALL_DIR&gt;&gt;/config</span></code>.</p>
 <section id="jobflow-yaml">
-<h3>jobflow.yaml<a class="headerlink" href="#jobflow-yaml" title="Permalink to this headline">#</a></h3>
+<h3>jobflow.yaml<a class="headerlink" href="#jobflow-yaml" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">jobflow.yaml</span></code> file contains the credentials of the MongoDB server that will store
 calculation outputs. The <code class="docutils literal notranslate"><span class="pre">jobflow.yaml</span></code> file requires you to enter the basic database
 information as well as what to call the main collection that results are kept in (e.g.
 <code class="docutils literal notranslate"><span class="pre">ouputs</span></code>). Note that you should replace the whole <code class="docutils literal notranslate"><span class="pre">&lt;&lt;PROPERTY&gt;&gt;</span></code> definition with
 your own settings.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">JOB_STORE</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">docs_store</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MongoStore</span><span class="w"></span>
-<span class="w">    </span><span class="nt">database</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;DB_NAME&gt;&gt;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;HOSTNAME&gt;&gt;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;PORT&gt;&gt;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;USERNAME&gt;&gt;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;PASSWORD&gt;&gt;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">collection_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outputs</span><span class="w"></span>
-<span class="w">  </span><span class="nt">additional_stores</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">data</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GridFSStore</span><span class="w"></span>
-<span class="w">      </span><span class="nt">database</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;DB_NAME&gt;&gt;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;HOSTNAME&gt;&gt;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;PORT&gt;&gt;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;USERNAME&gt;&gt;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;PASSWORD&gt;&gt;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">collection_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outputs_blobs</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">JOB_STORE</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">docs_store</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MongoStore</span>
+<span class="w">    </span><span class="nt">database</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;DB_NAME&gt;&gt;</span>
+<span class="w">    </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;HOSTNAME&gt;&gt;</span>
+<span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;PORT&gt;&gt;</span>
+<span class="w">    </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;USERNAME&gt;&gt;</span>
+<span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;PASSWORD&gt;&gt;</span>
+<span class="w">    </span><span class="nt">collection_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outputs</span>
+<span class="w">  </span><span class="nt">additional_stores</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">data</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GridFSStore</span>
+<span class="w">      </span><span class="nt">database</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;DB_NAME&gt;&gt;</span>
+<span class="w">      </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;HOSTNAME&gt;&gt;</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;PORT&gt;&gt;</span>
+<span class="w">      </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;USERNAME&gt;&gt;</span>
+<span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;PASSWORD&gt;&gt;</span>
+<span class="w">      </span><span class="nt">collection_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outputs_blobs</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -1581,16 +1162,16 @@ your own settings.</p>
 <p>If you’re using a mongoDB hosted on Atlas (using the free plan linked above) the
 connection format is slightly different. Instead your <code class="docutils literal notranslate"><span class="pre">jobflow.yaml</span></code> file should
 contain the following.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">JOB_STORE</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">docs_store</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MongoURIStore</span><span class="w"></span>
-<span class="w">    </span><span class="nt">uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongodb+srv://&lt;&lt;USERNAME&gt;&gt;:&lt;&lt;PASSWORD&gt;&gt;@&lt;&lt;HOST&gt;&gt;/&lt;&lt;DB_NAME&gt;&gt;?retryWrites=true&amp;w=majority</span><span class="w"></span>
-<span class="w">    </span><span class="nt">collection_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outputs</span><span class="w"></span>
-<span class="w">  </span><span class="nt">additional_stores</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">data</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GridFSURIStore</span><span class="w"></span>
-<span class="w">      </span><span class="nt">uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongodb+srv://&lt;&lt;USERNAME&gt;&gt;:&lt;&lt;PASSWORD&gt;&gt;@&lt;&lt;HOST&gt;&gt;/&lt;&lt;DB_NAME&gt;&gt;?retryWrites=true&amp;w=majority</span><span class="w"></span>
-<span class="w">      </span><span class="nt">collection_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outputs_blobs</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">JOB_STORE</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">docs_store</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MongoURIStore</span>
+<span class="w">    </span><span class="nt">uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongodb+srv://&lt;&lt;USERNAME&gt;&gt;:&lt;&lt;PASSWORD&gt;&gt;@&lt;&lt;HOST&gt;&gt;/&lt;&lt;DB_NAME&gt;&gt;?retryWrites=true&amp;w=majority</span>
+<span class="w">    </span><span class="nt">collection_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outputs</span>
+<span class="w">  </span><span class="nt">additional_stores</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">data</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GridFSURIStore</span>
+<span class="w">      </span><span class="nt">uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mongodb+srv://&lt;&lt;USERNAME&gt;&gt;:&lt;&lt;PASSWORD&gt;&gt;@&lt;&lt;HOST&gt;&gt;/&lt;&lt;DB_NAME&gt;&gt;?retryWrites=true&amp;w=majority</span>
+<span class="w">      </span><span class="nt">collection_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">outputs_blobs</span>
 </pre></div>
 </div>
 <p>The URI key may be different based on the Atlas database you deployed. You can
@@ -1616,19 +1197,19 @@ storage types are available (such as Amazon S3). For more information please rea
 <span class="xref myst"></span>.</p>
 </section>
 <section id="atomate2-yaml">
-<h3>atomate2.yaml<a class="headerlink" href="#atomate2-yaml" title="Permalink to this headline">#</a></h3>
+<h3>atomate2.yaml<a class="headerlink" href="#atomate2-yaml" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">atomate2.yaml</span></code> file controls all atomate2 settings. You can see the full list
 of available settings in the <a class="reference internal" href="../reference/atomate2.settings.Atomate2Settings.html#atomate2.settings.Atomate2Settings" title="atomate2.settings.Atomate2Settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Atomate2Settings</span></code></a> docs. For now, we will just
 configure the commands used to run VASP.</p>
 <p>Write the <code class="docutils literal notranslate"><span class="pre">atomate2.yaml</span></code> file with the following content,</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VASP_CMD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;VASP_CMD&gt;&gt;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VASP_CMD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;VASP_CMD&gt;&gt;</span>
 </pre></div>
 </div>
 <p>The is the command that you would use to run VASP with parallelization
 (<code class="docutils literal notranslate"><span class="pre">srun</span> <span class="pre">-n</span> <span class="pre">16</span> <span class="pre">vasp</span></code>, <code class="docutils literal notranslate"><span class="pre">ibrun</span> <span class="pre">-n</span> <span class="pre">16</span> <span class="pre">vasp</span></code>, <code class="docutils literal notranslate"><span class="pre">mpirun</span> <span class="pre">-n</span> <span class="pre">16</span> <span class="pre">vasp</span></code>, …).</p>
 </section>
 <section id="finishing-up">
-<h3>Finishing up<a class="headerlink" href="#finishing-up" title="Permalink to this headline">#</a></h3>
+<h3>Finishing up<a class="headerlink" href="#finishing-up" title="Permalink to this heading">#</a></h3>
 <p>The directory structure of <code class="docutils literal notranslate"><span class="pre">&lt;&lt;INSTALL_DIR&gt;&gt;/config</span></code> should now look like</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>config
 ├── jobflow.yaml
@@ -1638,37 +1219,37 @@ configure the commands used to run VASP.</p>
 <p>The last thing we need to do to configure atomate2 is add the following lines to your
 .bashrc / .bash_profile file to set an environment variable telling atomate2 and jobflow
 where to find the config files.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">ATOMATE2_CONFIG_FILE</span><span class="o">=</span><span class="s2">&quot;&lt;&lt;INSTALL_DIR&gt;&gt;/config/atomate2.yaml&quot;</span>
-<span class="nb">export</span> <span class="nv">JOBFLOW_CONFIG_FILE</span><span class="o">=</span><span class="s2">&quot;&lt;&lt;INSTALL_DIR&gt;&gt;/config/jobflow.yaml&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ATOMATE2_CONFIG_FILE</span><span class="o">=</span><span class="s2">&quot;&lt;&lt;INSTALL_DIR&gt;&gt;/config/atomate2.yaml&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">JOBFLOW_CONFIG_FILE</span><span class="o">=</span><span class="s2">&quot;&lt;&lt;INSTALL_DIR&gt;&gt;/config/jobflow.yaml&quot;</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">&lt;&lt;INSTALL_DIR&gt;&gt;</span></code> is your installation directory.</p>
 </section>
 </section>
 <section id="configure-pymatgen">
-<h2>Configure pymatgen<a class="headerlink" href="#configure-pymatgen" title="Permalink to this headline">#</a></h2>
+<h2>Configure pymatgen<a class="headerlink" href="#configure-pymatgen" title="Permalink to this heading">#</a></h2>
 <p>If you’re planning to run VASP, the last configuration step is to configure pymatgen to
 (required) find the pseudopotentials for VASP and (optional) set up your API key from
 the <a class="reference external" href="https://materialsproject.org/dashboard">Materials Project</a>.</p>
 <section id="pseudopotentials">
-<h3>Pseudopotentials<a class="headerlink" href="#pseudopotentials" title="Permalink to this headline">#</a></h3>
+<h3>Pseudopotentials<a class="headerlink" href="#pseudopotentials" title="Permalink to this heading">#</a></h3>
 <p>The psuedopotentials should be available on the compute machine. Follow the
 <a class="reference external" href="https://pymatgen.org/installation.html#potcar-setup">pseudopotential installation instructions in the pymatgen documentation</a>
 and then return to this tutorial.</p>
 </section>
 <section id="materials-project-api-key">
-<h3>Materials Project API key<a class="headerlink" href="#materials-project-api-key" title="Permalink to this headline">#</a></h3>
+<h3>Materials Project API key<a class="headerlink" href="#materials-project-api-key" title="Permalink to this heading">#</a></h3>
 <p>You can get an API key from the <a class="reference external" href="https://materialsproject.org/dashboard">Materials Project</a> by logging in and going to your
 <a class="reference external" href="https://materialsproject.org/dashboard">Dashboard</a>. Add this also to
 your <code class="docutils literal notranslate"><span class="pre">~/.pmgrc.yaml</span></code> so that it looks like the following</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">PMG_VASP_PSP_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;INSTALL_DIR&gt;&gt;/pps</span><span class="w"></span>
-<span class="nt">PMG_MAPI_KEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;YOUR_API_KEY&gt;&gt;</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">PMG_VASP_PSP_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;INSTALL_DIR&gt;&gt;/pps</span>
+<span class="nt">PMG_MAPI_KEY</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;&lt;YOUR_API_KEY&gt;&gt;</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="run-a-test-workflow">
-<h2>Run a test workflow<a class="headerlink" href="#run-a-test-workflow" title="Permalink to this headline">#</a></h2>
+<h2>Run a test workflow<a class="headerlink" href="#run-a-test-workflow" title="Permalink to this heading">#</a></h2>
 <p>To make sure that everything is set up correctly and in place, we’ll finally run a
 simple (but real) test workflow. We will first define a python script to run the
 workflow. Next, we’ll submit a job to run the script. Finally, we’ll examine the
@@ -1680,7 +1261,7 @@ this can be achieved using the FireWorks package and is covered in
 structure (not very exciting). In the subsequent tutorials, we’ll run more complex
 workflows.</p>
 <section id="define-the-workflow">
-<h3>Define the workflow<a class="headerlink" href="#define-the-workflow" title="Permalink to this headline">#</a></h3>
+<h3>Define the workflow<a class="headerlink" href="#define-the-workflow" title="Permalink to this heading">#</a></h3>
 <p>Workflows are written using the jobflow software. Essentially, individual stages of
 a workflow are simple python functions. Jobflow provides a way to connect jobs together
 in a natural way. For more details on connecting jobs together see:
@@ -1709,10 +1290,10 @@ or work directory) and create a file called <code class="docutils literal notran
 the current computing resource.</p>
 </section>
 <section id="submit-the-workflow">
-<h3>Submit the workflow<a class="headerlink" href="#submit-the-workflow" title="Permalink to this headline">#</a></h3>
+<h3>Submit the workflow<a class="headerlink" href="#submit-the-workflow" title="Permalink to this heading">#</a></h3>
 <p>Next, make a job submission script called <code class="docutils literal notranslate"><span class="pre">job.sh</span></code> containing:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate atomate2
-python relax.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>atomate2
+python<span class="w"> </span>relax.py
 </pre></div>
 </div>
 <p>The job submission script should include all the headers specific to your HPC resource.
@@ -1728,15 +1309,15 @@ jobs, your script would look something like:</p>
 
 <span class="c1"># ensure you load the modules to run VASP, e.g., module load vasp</span>
 
-conda activate atomate2
-python relax.py
+conda<span class="w"> </span>activate<span class="w"> </span>atomate2
+python<span class="w"> </span>relax.py
 </pre></div>
 </div>
 <p>Finally, submit the job to the queue using the normal scheduler command. For example
 on the Grid Engine scheduler, this would be using <code class="docutils literal notranslate"><span class="pre">qsub</span> <span class="pre">job.sh</span></code>.</p>
 </section>
 <section id="analyzing-the-results">
-<h3>Analyzing the results<a class="headerlink" href="#analyzing-the-results" title="Permalink to this headline">#</a></h3>
+<h3>Analyzing the results<a class="headerlink" href="#analyzing-the-results" title="Permalink to this heading">#</a></h3>
 <p>Once the job is finished, you can connect to the output database and check the job
 output.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jobflow</span> <span class="kn">import</span> <span class="n">SETTINGS</span>
@@ -1761,7 +1342,7 @@ called a schema. You can see the VASP calculation scheme in the <a class="refere
 section of the documentation.</p>
 </section>
 <section id="next-steps">
-<h3>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">#</a></h3>
+<h3>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this heading">#</a></h3>
 <p>That’s it! You’ve completed the installation tutorial!</p>
 <p>See the following pages for more information on the topics we covered here:</p>
 <ul class="simple">
@@ -1773,15 +1354,15 @@ section of the documentation.</p>
 </section>
 </section>
 <section id="troubleshooting-and-faq">
-<h2>Troubleshooting and FAQ<a class="headerlink" href="#troubleshooting-and-faq" title="Permalink to this headline">#</a></h2>
+<h2>Troubleshooting and FAQ<a class="headerlink" href="#troubleshooting-and-faq" title="Permalink to this heading">#</a></h2>
 <section id="my-job-failed">
-<h3>My job failed!<a class="headerlink" href="#my-job-failed" title="Permalink to this headline">#</a></h3>
+<h3>My job failed!<a class="headerlink" href="#my-job-failed" title="Permalink to this heading">#</a></h3>
 <p>Check the job error files in the launch directory for any errors. Also check the job
 standard output for a full log of the workflow execution and to check for a Python
 traceback.</p>
 </section>
 <section id="i-honestly-tried-everything-i-can-to-solve-my-problem-i-still-need-help">
-<h3>I honestly tried everything I can to solve my problem. I still need help!<a class="headerlink" href="#i-honestly-tried-everything-i-can-to-solve-my-problem-i-still-need-help" title="Permalink to this headline">#</a></h3>
+<h3>I honestly tried everything I can to solve my problem. I still need help!<a class="headerlink" href="#i-honestly-tried-everything-i-can-to-solve-my-problem-i-still-need-help" title="Permalink to this heading">#</a></h3>
 <p>There is a <a class="reference external" href="https://discuss.matsci.org/c/atomate">support forum for atomate2</a>.</p>
 </section>
 </section>
@@ -1799,7 +1380,7 @@ traceback.</p>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./user"
         },
         predefinedOutput: true
@@ -1807,50 +1388,232 @@ traceback.</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
-              
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="running-workflows.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Running Workflows</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+  <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Introduction</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="running-workflows.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Running Workflows</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
 </div>
             </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
   
-    By the Materials Project<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
-    
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objectives">
+     Objectives
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installation-checklist">
+     Installation checklist
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vasp">
+     VASP
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mongodb">
+     MongoDB
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-directory-scaffold-for-atomate2">
+   Create a directory scaffold for atomate2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-conda-environment">
+   Create a conda environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-python-packages">
+   Install Python packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-calculation-output-database">
+   Configure calculation output database
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jobflow-yaml">
+     jobflow.yaml
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atomate2-yaml">
+     atomate2.yaml
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finishing-up">
+     Finishing up
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-pymatgen">
+   Configure pymatgen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pseudopotentials">
+     Pseudopotentials
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#materials-project-api-key">
+     Materials Project API key
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-a-test-workflow">
+   Run a test workflow
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#define-the-workflow">
+     Define the workflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submit-the-workflow">
+     Submit the workflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyzing-the-results">
+     Analyzing the results
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#next-steps">
+     Next steps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#troubleshooting-and-faq">
+   Troubleshooting and FAQ
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#my-job-failed">
+     My job failed!
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#i-honestly-tried-everything-i-can-to-solve-my-problem-i-still-need-help">
+     I honestly tried everything I can to solve my problem. I still need help!
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
 </div>
 
-
-      </div>
-    </div>
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By the Materials Project
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2022.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
 
   </body>
 </html>

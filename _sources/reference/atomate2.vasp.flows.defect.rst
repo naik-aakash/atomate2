@@ -9,14 +9,6 @@ atomate2.vasp.flows.defect
 
    
 
-   .. rubric:: Functions
-
-   .. autosummary::
-      :toctree:
-      :nosignatures:
-   
-      get_charged_structures
-
 
 
    
@@ -38,6 +30,8 @@ atomate2.vasp.flows.defect
    
       
    
+   
+      
    
    
    
@@ -54,9 +48,10 @@ atomate2.vasp.flows.defect
       :nosignatures:
    
       ConfigurationCoordinateMaker
-      DEFAULT_DISTORTIONS
       DEFECT_INCAR_SETTINGS
       DEFECT_KPOINT_SETTINGS
+      FormationEnergyMaker
+      GRID_KEYS
       NonRadiativeMaker
 
 

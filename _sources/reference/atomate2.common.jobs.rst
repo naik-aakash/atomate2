@@ -9,23 +9,12 @@ atomate2.common.jobs
 
    
 
-   .. rubric:: Functions
-
-   .. autosummary::
-      :toctree:
-      :nosignatures:
-   
-      structure_to_conventional
-      structure_to_primitive
-
 
 
    
 
 
 
-   
-   
    
    
    
@@ -42,4 +31,13 @@ atomate2.common.jobs
    
 
 
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   atomate2.common.jobs.defect
+   atomate2.common.jobs.utils
 

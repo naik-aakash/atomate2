@@ -40,6 +40,7 @@
 
    atomate2.common.analysis
    atomate2.common.files
+   atomate2.common.flows
    atomate2.common.jobs
    atomate2.common.schemas
 

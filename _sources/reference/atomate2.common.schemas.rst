@@ -39,6 +39,7 @@ atomate2.common.schemas
    :recursive:
 
    atomate2.common.schemas.cclib
+   atomate2.common.schemas.defects
    atomate2.common.schemas.elastic
    atomate2.common.schemas.math
    atomate2.common.schemas.molecule

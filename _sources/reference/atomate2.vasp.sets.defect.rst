@@ -19,6 +19,15 @@ atomate2.vasp.sets.defect
       
    
    
+      
+   
+   
+      
+   
+   
+      
+   
+   
    
    
    
@@ -32,7 +41,10 @@ atomate2.vasp.sets.defect
       :toctree:
       :nosignatures:
    
-      AtomicRelaxSetGenerator
+      ChargeStateRelaxSetGenerator
+      ChargeStateStaticSetGenerator
+      HSEChargeStateRelaxSetGenerator
+      HSEChargeStateStaticSetGenerator
 
 
 

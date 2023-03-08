@@ -16,8 +16,6 @@ atomate2.vasp.jobs.defect
       :nosignatures:
    
       calculate_finite_diff
-      get_ccd_documents
-      spawn_energy_curve_calcs
 
 
 
@@ -26,7 +24,6 @@ atomate2.vasp.jobs.defect
 
 
    
-      
    
    
    
@@ -34,18 +31,6 @@ atomate2.vasp.jobs.defect
    
    
    
-   
-   
-   
-
-
-   .. rubric:: Classes
-
-   .. autosummary::
-      :toctree:
-      :nosignatures:
-   
-      CCDInput
 
 
 
