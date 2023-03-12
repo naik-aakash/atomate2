@@ -1,0 +1,1519 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>atomate2.lobster.schemas &#8212; atomate2</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/autodoc_pydantic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/github.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/atomate2/lobster/schemas';</script>
+    <link rel="canonical" href="https://materialsproject.github.io/atomate2/_modules/atomate2/lobster/schemas.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">atomate2</p>
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user/index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user/install.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user/running-workflows.html">
+                        Running Workflows
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user/fireworks.html">
+                        Using atomate2 with FireWorks
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user/codes/index.html">
+                        Codes
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../reference/index.html">
+                        API reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../dev/dev_install.html">
+                        Developer Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../dev/vasp_tests.html">
+                        Writing VASP Tests
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../about/changelog.html">
+                        Change log
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../about/contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../about/contributing.html">
+                        Contributing to atomate2
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../about/license.html">
+                        License
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user/index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user/install.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user/running-workflows.html">
+                        Running Workflows
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user/fireworks.html">
+                        Using atomate2 with FireWorks
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../user/codes/index.html">
+                        Codes
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../reference/index.html">
+                        API reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../dev/dev_install.html">
+                        Developer Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../dev/vasp_tests.html">
+                        Writing VASP Tests
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../about/changelog.html">
+                        Change log
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../about/contributors.html">
+                        Contributors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../about/contributing.html">
+                        Contributing to atomate2
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../about/license.html">
+                        License
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">atomate2</p>
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/running-workflows.html">Running Workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/fireworks.html">Using atomate2 with FireWorks</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../user/codes/index.html">Codes</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../user/codes/vasp.html">VASP</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../reference/index.html">API reference</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/atomate2.amset.html">atomate2.amset</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.amset.files.html">atomate2.amset.files</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.amset.files.copy_amset_files.html">copy_amset_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.amset.files.write_amset_settings.html">write_amset_settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.amset.jobs.html">atomate2.amset.jobs</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.amset.jobs.AmsetMaker.html">AmsetMaker</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.amset.run.html">atomate2.amset.run</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.amset.run.check_converged.html">check_converged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.amset.run.run_amset.html">run_amset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.amset.run.tensor_average.html">tensor_average</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.amset.schemas.html">atomate2.amset.schemas</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.amset.schemas.AmsetTaskDocument.html">AmsetTaskDocument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.amset.schemas.MeshData.html">MeshData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.amset.schemas.TransportData.html">TransportData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.amset.schemas.UsageStats.html">UsageStats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.amset.schemas.amset.html">amset</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/atomate2.common.html">atomate2.common</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.common.analysis.html">atomate2.common.analysis</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.analysis.elastic.html">atomate2.common.analysis.elastic</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.common.files.html">atomate2.common.files</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.files.copy_files.html">copy_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.files.delete_files.html">delete_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.files.find_and_filter_files.html">find_and_filter_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.files.get_zfile.html">get_zfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.files.gunzip_files.html">gunzip_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.files.gzip_files.html">gzip_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.files.rename_files.html">rename_files</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.common.flows.html">atomate2.common.flows</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.flows.defect.html">atomate2.common.flows.defect</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.common.jobs.html">atomate2.common.jobs</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.jobs.defect.html">atomate2.common.jobs.defect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.jobs.utils.html">atomate2.common.jobs.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.common.schemas.html">atomate2.common.schemas</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.schemas.cclib.html">atomate2.common.schemas.cclib</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.schemas.defects.html">atomate2.common.schemas.defects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.schemas.elastic.html">atomate2.common.schemas.elastic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.schemas.math.html">atomate2.common.schemas.math</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.schemas.molecule.html">atomate2.common.schemas.molecule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.schemas.structure.html">atomate2.common.schemas.structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.common.schemas.symmetry.html">atomate2.common.schemas.symmetry</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/atomate2.lobster.html">atomate2.lobster</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.lobster.files.html">atomate2.lobster.files</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.lobster.files.copy_lobster_files.html">copy_lobster_files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.lobster.files.LOBSTEROUTPUT_FILES.html">LOBSTEROUTPUT_FILES</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.lobster.files.VASP_OUTPUT_FILES.html">VASP_OUTPUT_FILES</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.lobster.jobs.html">atomate2.lobster.jobs</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.lobster.jobs.LobsterMaker.html">LobsterMaker</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.lobster.run.html">atomate2.lobster.run</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.lobster.run.run_lobster.html">run_lobster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.lobster.run.JobType.html">JobType</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.lobster.schemas.html">atomate2.lobster.schemas</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.lobster.schemas.CondensedBondingAnalysis.html">CondensedBondingAnalysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.lobster.schemas.LobsterTaskDocument.html">LobsterTaskDocument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.lobster.schemas.LobsterinModel.html">LobsterinModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.lobster.schemas.LobsteroutModel.html">LobsteroutModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.lobster.schemas.StrongestBonds.html">StrongestBonds</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/atomate2.settings.html">atomate2.settings</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../reference/atomate2.settings.Atomate2Settings.html">Atomate2Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/atomate2.utils.html">atomate2.utils</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.utils.datetime.html">atomate2.utils.datetime</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.utils.datetime.datetime_str.html">datetime_str</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.utils.file_client.html">atomate2.utils.file_client</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.utils.file_client.auto_fileclient.html">auto_fileclient</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.utils.file_client.get_ssh_connection.html">get_ssh_connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.utils.file_client.FileClient.html">FileClient</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.utils.log.html">atomate2.utils.log</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.utils.log.initialize_logger.html">initialize_logger</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.utils.path.html">atomate2.utils.path</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.utils.path.find_recent_logfile.html">find_recent_logfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.utils.path.get_uri.html">get_uri</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.utils.path.strip_hostname.html">strip_hostname</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/atomate2.vasp.html">atomate2.vasp</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.vasp.builders.html">atomate2.vasp.builders</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.builders.elastic.html">atomate2.vasp.builders.elastic</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.vasp.drones.html">atomate2.vasp.drones</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.drones.VaspDrone.html">VaspDrone</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.vasp.files.html">atomate2.vasp.files</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.files.copy_vasp_outputs.html">copy_vasp_outputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.files.get_largest_relax_extension.html">get_largest_relax_extension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.files.write_vasp_input_set.html">write_vasp_input_set</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.vasp.flows.html">atomate2.vasp.flows</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.flows.amset.html">atomate2.vasp.flows.amset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.flows.core.html">atomate2.vasp.flows.core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.flows.defect.html">atomate2.vasp.flows.defect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.flows.elastic.html">atomate2.vasp.flows.elastic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.flows.elph.html">atomate2.vasp.flows.elph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.flows.lobster.html">atomate2.vasp.flows.lobster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.flows.phonons.html">atomate2.vasp.flows.phonons</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.vasp.jobs.html">atomate2.vasp.jobs</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-30"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.jobs.amset.html">atomate2.vasp.jobs.amset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.jobs.base.html">atomate2.vasp.jobs.base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.jobs.core.html">atomate2.vasp.jobs.core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.jobs.defect.html">atomate2.vasp.jobs.defect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.jobs.elastic.html">atomate2.vasp.jobs.elastic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.jobs.elph.html">atomate2.vasp.jobs.elph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.jobs.lobster.html">atomate2.vasp.jobs.lobster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.jobs.phonons.html">atomate2.vasp.jobs.phonons</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.vasp.powerups.html">atomate2.vasp.powerups</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.powerups.update_user_incar_settings.html">update_user_incar_settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.powerups.update_user_kpoints_settings.html">update_user_kpoints_settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.powerups.update_user_potcar_functional.html">update_user_potcar_functional</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.powerups.update_user_potcar_settings.html">update_user_potcar_settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.powerups.use_auto_ispin.html">use_auto_ispin</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.vasp.run.html">atomate2.vasp.run</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.run.run_vasp.html">run_vasp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.run.should_stop_children.html">should_stop_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.run.JobType.html">JobType</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.vasp.schemas.html">atomate2.vasp.schemas</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.schemas.calc_types.html">atomate2.vasp.schemas.calc_types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.schemas.calculation.html">atomate2.vasp.schemas.calculation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.schemas.defect.html">atomate2.vasp.schemas.defect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.schemas.elph.html">atomate2.vasp.schemas.elph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.schemas.phonons.html">atomate2.vasp.schemas.phonons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.schemas.task.html">atomate2.vasp.schemas.task</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/atomate2.vasp.sets.html">atomate2.vasp.sets</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.sets.base.html">atomate2.vasp.sets.base</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.sets.core.html">atomate2.vasp.sets.core</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.sets.defect.html">atomate2.vasp.sets.defect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/atomate2.vasp.sets.lobster.html">atomate2.vasp.sets.lobster</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../dev/dev_install.html">Developer Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev/vasp_tests.html">Writing VASP Tests</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../about/changelog.html">Change log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/contributing.html">Contributing to atomate2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/license.html">License</a></li>
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/materialsproject/atomate2" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">repository</span>
+</a>
+</a>
+      
+      <li><a href="https://github.com/materialsproject/atomate2/issues/new?title=Issue%20on%20page%20%2F_modules/atomate2/lobster/schemas.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">open issue</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <h1>Source code for atomate2.lobster.schemas</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Module defining amset document schemas.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">monty.dev</span> <span class="kn">import</span> <span class="n">requires</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span>
+<span class="kn">from</span> <span class="nn">pymatgen.core</span> <span class="kn">import</span> <span class="n">Structure</span>
+<span class="kn">from</span> <span class="nn">pymatgen.electronic_structure.cohp</span> <span class="kn">import</span> <span class="n">CompleteCohp</span>
+<span class="kn">from</span> <span class="nn">pymatgen.electronic_structure.core</span> <span class="kn">import</span> <span class="n">Spin</span>
+<span class="kn">from</span> <span class="nn">pymatgen.electronic_structure.dos</span> <span class="kn">import</span> <span class="n">LobsterCompleteDos</span>
+<span class="kn">from</span> <span class="nn">pymatgen.io.lobster</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Charge</span><span class="p">,</span>
+    <span class="n">Doscar</span><span class="p">,</span>
+    <span class="n">Icohplist</span><span class="p">,</span>
+    <span class="n">Lobsterin</span><span class="p">,</span>
+    <span class="n">Lobsterout</span><span class="p">,</span>
+    <span class="n">MadelungEnergies</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">atomate2</span> <span class="kn">import</span> <span class="n">__version__</span>
+<span class="kn">from</span> <span class="nn">atomate2.utils.datetime</span> <span class="kn">import</span> <span class="n">datetime_str</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">lobsterpy.cohp.analyze</span> <span class="kn">import</span> <span class="n">Analysis</span>
+    <span class="kn">from</span> <span class="nn">lobsterpy.cohp.describe</span> <span class="kn">import</span> <span class="n">Description</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">Analysis</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">Description</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;LobsterTaskDocument&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;LobsteroutModel&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;LobsterinModel&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CondensedBondingAnalysis&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;StrongestBonds&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="LobsteroutModel"><a class="viewcode-back" href="../../../reference/atomate2.lobster.schemas.LobsteroutModel.html#atomate2.lobster.schemas.LobsteroutModel">[docs]</a><span class="k">class</span> <span class="nc">LobsteroutModel</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Definition of computational settings from the LOBSTER computation.&quot;&quot;&quot;</span>
+
+    <span class="n">restart_from_projection</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Bool indicating if the run has been restarted from a projection&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">lobster_version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Lobster version&quot;</span><span class="p">)</span>
+    <span class="n">threads</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number of threads that Lobster ran on&quot;</span><span class="p">)</span>
+    <span class="n">dft_program</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;DFT program was used for this run&quot;</span><span class="p">)</span>
+    <span class="n">charge_spilling</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Absolute charge spilling&quot;</span><span class="p">)</span>
+    <span class="n">total_spilling</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Total spilling&quot;</span><span class="p">)</span>
+    <span class="n">elements</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Elements in structure&quot;</span><span class="p">)</span>
+    <span class="n">basis_type</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Basis set used in Lobster&quot;</span><span class="p">)</span>
+    <span class="n">basis_functions</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;basis_functions&quot;</span><span class="p">)</span>
+    <span class="n">timing</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Dict with infos on timing&quot;</span><span class="p">)</span>
+    <span class="n">warning_lines</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Warnings&quot;</span><span class="p">)</span>
+    <span class="n">info_orthonormalization</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;additional information on orthonormalization&quot;</span>
+    <span class="p">)</span>
+    <span class="n">info_lines</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;list of strings with additional info lines&quot;</span>
+    <span class="p">)</span>
+    <span class="n">has_doscar</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Bool indicating if DOSCAR is present.&quot;</span><span class="p">)</span>
+    <span class="n">has_cohpcar</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Bool indicating if COHPCAR is present.&quot;</span>
+    <span class="p">)</span>
+    <span class="n">has_coopcar</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Bool indicating if COOPCAR is present.&quot;</span>
+    <span class="p">)</span>
+    <span class="n">has_cobicar</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Bool indicating if COBICAR is present.&quot;</span>
+    <span class="p">)</span>
+    <span class="n">has_charge</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Bool indicating if CHARGE is present.&quot;</span><span class="p">)</span>
+    <span class="n">has_madelung</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Bool indicating if Madelung file is present.&quot;</span>
+    <span class="p">)</span>
+    <span class="n">has_projection</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Bool indicating if projection file is present.&quot;</span>
+    <span class="p">)</span>
+    <span class="n">has_bandoverlaps</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Bool indicating if BANDOVERLAPS file is presetn&quot;</span>
+    <span class="p">)</span>
+    <span class="n">has_fatbands</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Bool indicating if Fatbands are present.&quot;</span>
+    <span class="p">)</span>
+    <span class="n">has_grosspopulation</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Bool indicating if GrossPopulations file is present.&quot;</span>
+    <span class="p">)</span>
+    <span class="n">has_density_of_energies</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Bool indicating if DensityofEnergies is present&quot;</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="LobsterinModel"><a class="viewcode-back" href="../../../reference/atomate2.lobster.schemas.LobsterinModel.html#atomate2.lobster.schemas.LobsterinModel">[docs]</a><span class="k">class</span> <span class="nc">LobsterinModel</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Definition of input settings for the LOBSTER computation.&quot;&quot;&quot;</span>
+
+    <span class="n">cohpstartenergy</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Start energy for COHP computation&quot;</span>
+    <span class="p">)</span>
+    <span class="n">cohpendenergy</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;End energy for COHP computation&quot;</span><span class="p">)</span>
+
+    <span class="n">gaussiansmearingwidth</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Set the smearing width in eV,default is 0.2 (eV)&quot;</span>
+    <span class="p">)</span>
+    <span class="n">usedecimalplaces</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Set the decimal places to print in output files, default is 5&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">cohpsteps</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number steps in COHPCAR; similar to NEDOS of VASP&quot;</span>
+    <span class="p">)</span>
+    <span class="n">basisset</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;basis set of computation&quot;</span><span class="p">)</span>
+    <span class="n">cohpgenerator</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Build the list of atom pairs to be analyzed using given distance&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">saveprojectiontofile</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Save the results of projections&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lsodos</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Writes DOS output from the orthonormalized LCAO basis&quot;</span>
+    <span class="p">)</span>
+    <span class="n">basisfunctions</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Specify the basis functions for element&quot;</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="CondensedBondingAnalysis"><a class="viewcode-back" href="../../../reference/atomate2.lobster.schemas.CondensedBondingAnalysis.html#atomate2.lobster.schemas.CondensedBondingAnalysis">[docs]</a><span class="k">class</span> <span class="nc">CondensedBondingAnalysis</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Definition of condensed bonding analysis data from LobsterPy ICOHP.&quot;&quot;&quot;</span>
+
+    <span class="n">formula</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Pretty formula of the structure&quot;</span><span class="p">)</span>
+    <span class="n">max_considered_bond_length</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Maximum bond length considered &quot;</span> <span class="s2">&quot;in bonding analysis&quot;</span>
+    <span class="p">)</span>
+    <span class="n">limit_icohp</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;ICOHP range considered in co-ordination environment analysis&quot;</span>
+    <span class="p">)</span>
+    <span class="n">number_of_considered_ions</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;number of ions detected based on Mulliken/L�wdin Charges&quot;</span>
+    <span class="p">)</span>
+    <span class="n">sites</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Dict object that describes bond summary stats, &quot;</span>
+        <span class="s2">&quot;bonding/antibonding percentage and its coordination environment&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">type_charges</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Charge type considered for assigning valences in bonding analysis&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">cutoff_icohp</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Percent limiting the ICOHP values to be considered&quot;</span>
+        <span class="s2">&quot; relative to strongest ICOHP&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">summed_spins</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Bool stating whether to sum spin channels during analysis&quot;</span>
+    <span class="p">)</span>
+    <span class="n">start</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Sets the lower limit of energy relative to Fermi for evaluating&quot;</span>
+        <span class="s2">&quot; bonding/anti-bonding percentages in the bond&quot;</span>
+        <span class="s2">&quot; if set to None, all energies up-to the Fermi is considered&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">cohp_plot_data</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Stores the COHP plot data based on relevant bond labels &quot;</span>
+        <span class="s2">&quot;for site as keys&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">which_bonds</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Specifies types of bond considered in LobsterPy analysis&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">final_dict_bonds</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Dict consisting information on ICOHPs per bond type&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">final_dict_ions</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Dict consisting information on environments of cations&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">run_time</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Time needed to run Lobsterpy condensed bonding analysis&quot;</span>
+    <span class="p">)</span>
+
+<div class="viewcode-block" id="CondensedBondingAnalysis.from_directory"><a class="viewcode-back" href="../../../reference/atomate2.lobster.schemas.CondensedBondingAnalysis.html#atomate2.lobster.schemas.CondensedBondingAnalysis.from_directory">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_directory</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">dir_name</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">],</span>
+        <span class="n">save_cohp_plots</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">plot_kwargs</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a task document from a directory containing LOBSTER files.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        dir_name : path or str</span>
+<span class="sd">            The path to the folder containing the calculation outputs.</span>
+<span class="sd">        save_cohp_plots : bool</span>
+<span class="sd">            Bool to indicate whether automatic cohp plots and jsons</span>
+<span class="sd">            from lobsterpy will be generated.</span>
+<span class="sd">        plot_kwargs : dict</span>
+<span class="sd">            kwargs to change plotting options in lobsterpy.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">plot_kwargs</span> <span class="o">=</span> <span class="p">{}</span> <span class="k">if</span> <span class="n">plot_kwargs</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">plot_kwargs</span>
+        <span class="n">dir_name</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">dir_name</span><span class="p">)</span>
+
+        <span class="n">cohpcar_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;COHPCAR.lobster.gz&quot;</span>
+        <span class="n">charge_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;CHARGE.lobster.gz&quot;</span>
+        <span class="n">structure_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;POSCAR.gz&quot;</span>
+        <span class="n">icohplist_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;ICOHPLIST.lobster.gz&quot;</span>
+        <span class="n">icobilist_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;ICOBILIST.lobster.gz&quot;</span>
+        <span class="n">icooplist_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;ICOOPLIST.lobster.gz&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># cation anion-mode</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+            <span class="n">analyse</span> <span class="o">=</span> <span class="n">Analysis</span><span class="p">(</span>
+                <span class="n">path_to_poscar</span><span class="o">=</span><span class="n">structure_path</span><span class="p">,</span>
+                <span class="n">path_to_icohplist</span><span class="o">=</span><span class="n">icohplist_path</span><span class="p">,</span>
+                <span class="n">path_to_cohpcar</span><span class="o">=</span><span class="n">cohpcar_path</span><span class="p">,</span>
+                <span class="n">path_to_charge</span><span class="o">=</span><span class="n">charge_path</span><span class="p">,</span>
+                <span class="n">summed_spins</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">cutoff_icohp</span><span class="o">=</span><span class="mf">0.10</span><span class="p">,</span>
+                <span class="n">whichbonds</span><span class="o">=</span><span class="s2">&quot;cation-anion&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">cba_run_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="c1"># all bonds</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+            <span class="n">analyse</span> <span class="o">=</span> <span class="n">Analysis</span><span class="p">(</span>
+                <span class="n">path_to_poscar</span><span class="o">=</span><span class="n">structure_path</span><span class="p">,</span>
+                <span class="n">path_to_icohplist</span><span class="o">=</span><span class="n">icohplist_path</span><span class="p">,</span>
+                <span class="n">path_to_cohpcar</span><span class="o">=</span><span class="n">cohpcar_path</span><span class="p">,</span>
+                <span class="n">path_to_charge</span><span class="o">=</span><span class="n">charge_path</span><span class="p">,</span>
+                <span class="n">summed_spins</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">cutoff_icohp</span><span class="o">=</span><span class="mf">0.10</span><span class="p">,</span>
+                <span class="n">whichbonds</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">cba_run_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+
+        <span class="c1"># initialize lobsterpy condensed bonding analysis</span>
+        <span class="n">cba</span> <span class="o">=</span> <span class="n">analyse</span><span class="o">.</span><span class="n">condensed_bonding_analysis</span>
+        <span class="n">cba_cohp_plot_data</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Initialize dict to store plot data</span>
+
+        <span class="n">set_cohps</span> <span class="o">=</span> <span class="n">analyse</span><span class="o">.</span><span class="n">set_cohps</span>
+        <span class="n">set_labels_cohps</span> <span class="o">=</span> <span class="n">analyse</span><span class="o">.</span><span class="n">set_labels_cohps</span>
+        <span class="n">set_inequivalent_cations</span> <span class="o">=</span> <span class="n">analyse</span><span class="o">.</span><span class="n">set_inequivalent_ions</span>
+        <span class="n">struct</span> <span class="o">=</span> <span class="n">analyse</span><span class="o">.</span><span class="n">structure</span>
+        <span class="k">for</span> <span class="n">_iplot</span><span class="p">,</span> <span class="p">(</span><span class="n">ication</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">cohps</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span>
+            <span class="nb">zip</span><span class="p">(</span><span class="n">set_inequivalent_cations</span><span class="p">,</span> <span class="n">set_labels_cohps</span><span class="p">,</span> <span class="n">set_cohps</span><span class="p">)</span>
+        <span class="p">):</span>
+            <span class="n">label_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">struct</span><span class="p">[</span><span class="n">ication</span><span class="p">]</span><span class="o">.</span><span class="n">specie</span><span class="p">)</span><span class="si">}{</span><span class="nb">str</span><span class="p">(</span><span class="n">ication</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">: &quot;</span>
+            <span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">cohp</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">cohps</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">cba_cohp_plot_data</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+                        <span class="p">{</span>
+                            <span class="n">label_str</span>
+                            <span class="o">+</span> <span class="n">label</span><span class="p">:</span> <span class="p">{</span>
+                                <span class="s2">&quot;COHP&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">cohp</span><span class="o">.</span><span class="n">get_cohp</span><span class="p">()[</span><span class="n">Spin</span><span class="o">.</span><span class="n">up</span><span class="p">]),</span>
+                                <span class="s2">&quot;ICOHP&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">cohp</span><span class="o">.</span><span class="n">get_icohp</span><span class="p">()[</span><span class="n">Spin</span><span class="o">.</span><span class="n">up</span><span class="p">]),</span>
+                                <span class="s2">&quot;Energies&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">cohp</span><span class="o">.</span><span class="n">energies</span><span class="p">),</span>
+                                <span class="s2">&quot;Efermi&quot;</span><span class="p">:</span> <span class="n">cohp</span><span class="o">.</span><span class="n">efermi</span><span class="p">,</span>
+                            <span class="p">}</span>
+                        <span class="p">}</span>
+                    <span class="p">)</span>
+
+        <span class="n">describe</span> <span class="o">=</span> <span class="n">Description</span><span class="p">(</span><span class="n">analysis_object</span><span class="o">=</span><span class="n">analyse</span><span class="p">)</span>
+
+        <span class="n">condensed_bonding_analysis</span> <span class="o">=</span> <span class="n">CondensedBondingAnalysis</span><span class="p">(</span>
+            <span class="n">formula</span><span class="o">=</span><span class="n">cba</span><span class="p">[</span><span class="s2">&quot;formula&quot;</span><span class="p">],</span>
+            <span class="n">max_considered_bond_length</span><span class="o">=</span><span class="n">cba</span><span class="p">[</span><span class="s2">&quot;max_considered_bond_length&quot;</span><span class="p">],</span>
+            <span class="n">limit_icohp</span><span class="o">=</span><span class="n">cba</span><span class="p">[</span><span class="s2">&quot;limit_icohp&quot;</span><span class="p">],</span>
+            <span class="n">number_of_considered_ions</span><span class="o">=</span><span class="n">cba</span><span class="p">[</span><span class="s2">&quot;number_of_considered_ions&quot;</span><span class="p">],</span>
+            <span class="n">sites</span><span class="o">=</span><span class="n">cba</span><span class="p">[</span><span class="s2">&quot;sites&quot;</span><span class="p">],</span>
+            <span class="n">type_charges</span><span class="o">=</span><span class="n">analyse</span><span class="o">.</span><span class="n">type_charge</span><span class="p">,</span>
+            <span class="n">cohp_plot_data</span><span class="o">=</span><span class="n">cba_cohp_plot_data</span><span class="p">,</span>
+            <span class="n">cutoff_icohp</span><span class="o">=</span><span class="n">analyse</span><span class="o">.</span><span class="n">cutoff_icohp</span><span class="p">,</span>
+            <span class="n">summed_spins</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">which_bonds</span><span class="o">=</span><span class="n">analyse</span><span class="o">.</span><span class="n">whichbonds</span><span class="p">,</span>
+            <span class="n">final_dict_bonds</span><span class="o">=</span><span class="n">analyse</span><span class="o">.</span><span class="n">final_dict_bonds</span><span class="p">,</span>
+            <span class="n">final_dict_ions</span><span class="o">=</span><span class="n">analyse</span><span class="o">.</span><span class="n">final_dict_ions</span><span class="p">,</span>
+            <span class="n">run_time</span><span class="o">=</span><span class="n">cba_run_time</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">save_cohp_plots</span><span class="p">:</span>
+            <span class="n">describe</span><span class="o">.</span><span class="n">plot_cohps</span><span class="p">(</span>
+                <span class="n">save</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;automatic_cohp_plots.pdf&quot;</span><span class="p">,</span>
+                <span class="n">skip_show</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">plot_kwargs</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="kn">import</span> <span class="nn">json</span>
+
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;condensed_bonding_analysis.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+                <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">analyse</span><span class="o">.</span><span class="n">condensed_bonding_analysis</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;condensed_bonding_analysis.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">describe</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+                    <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Read in strongest icohp values</span>
+        <span class="n">sb_icobi</span><span class="p">,</span> <span class="n">sb_icohp</span><span class="p">,</span> <span class="n">sb_icoop</span> <span class="o">=</span> <span class="n">_identify_strongest_bonds</span><span class="p">(</span>
+            <span class="n">analyse</span><span class="p">,</span> <span class="n">icobilist_path</span><span class="p">,</span> <span class="n">icohplist_path</span><span class="p">,</span> <span class="n">icooplist_path</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="n">condensed_bonding_analysis</span><span class="p">,</span>
+            <span class="n">struct</span><span class="p">,</span>
+            <span class="n">describe</span><span class="p">,</span>
+            <span class="n">sb_icobi</span><span class="p">,</span>
+            <span class="n">sb_icohp</span><span class="p">,</span>
+            <span class="n">sb_icoop</span><span class="p">,</span>
+        <span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="StrongestBonds"><a class="viewcode-back" href="../../../reference/atomate2.lobster.schemas.StrongestBonds.html#atomate2.lobster.schemas.StrongestBonds">[docs]</a><span class="k">class</span> <span class="nc">StrongestBonds</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Strongest bonds extracted from ICOHPLIST/ICOOPLIST/ICOBILIST from LOBSTER.&quot;&quot;&quot;</span>
+
+    <span class="n">which_bonds</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Denotes whether the information &quot;</span>
+        <span class="s2">&quot;is for cation-anion pairs or all bonds&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">are_coops</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Denotes whether the file consists of ICOOPs&quot;</span>
+    <span class="p">)</span>
+    <span class="n">are_cobis</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Denotes whether the file consists of ICOBIs&quot;</span>
+    <span class="p">)</span>
+    <span class="n">strongest_bonds</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Dict with infos on bond strength,&quot;</span>
+        <span class="s2">&quot; length between cation-anion pairs&quot;</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="LobsterTaskDocument"><a class="viewcode-back" href="../../../reference/atomate2.lobster.schemas.LobsterTaskDocument.html#atomate2.lobster.schemas.LobsterTaskDocument">[docs]</a><span class="k">class</span> <span class="nc">LobsterTaskDocument</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Definition of LOBSTER task document.&quot;&quot;&quot;</span>
+
+    <span class="n">structure</span><span class="p">:</span> <span class="n">Structure</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;The structure used in this task&quot;</span><span class="p">)</span>
+    <span class="n">dir_name</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;The directory for this Lobster task&quot;</span><span class="p">)</span>
+    <span class="n">last_updated</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default_factory</span><span class="o">=</span><span class="n">datetime_str</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Timestamp for this task document was last updated&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">charges</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Atomic charges dict from LOBSTER&quot;</span>
+        <span class="s2">&quot; based on Mulliken and Loewdin charge analysis&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">lobsterout</span><span class="p">:</span> <span class="n">LobsteroutModel</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Lobster out data&quot;</span><span class="p">)</span>
+    <span class="n">lobsterin</span><span class="p">:</span> <span class="n">LobsterinModel</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Lobster calculation inputs&quot;</span><span class="p">)</span>
+    <span class="n">lobsterpy_data</span><span class="p">:</span> <span class="n">CondensedBondingAnalysis</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Model describing the LobsterPy data&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lobsterpy_summary_text</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Stores LobsterPy automatic analysis summary text&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">strongest_bonds_icohp</span><span class="p">:</span> <span class="n">StrongestBonds</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Describes the strongest cation-anion ICOHP bonds&quot;</span>
+    <span class="p">)</span>
+    <span class="n">strongest_bonds_icoop</span><span class="p">:</span> <span class="n">StrongestBonds</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Describes the strongest cation-anion ICOOP bonds&quot;</span>
+    <span class="p">)</span>
+    <span class="n">strongest_bonds_icobi</span><span class="p">:</span> <span class="n">StrongestBonds</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Describes the strongest cation-anion ICOBI bonds&quot;</span>
+    <span class="p">)</span>
+    <span class="n">cohp_data</span><span class="p">:</span> <span class="n">CompleteCohp</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;pymatgen CompleteCohp object with COHP data&quot;</span>
+    <span class="p">)</span>
+    <span class="n">coop_data</span><span class="p">:</span> <span class="n">CompleteCohp</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;pymatgen CompleteCohp object with COOP data&quot;</span>
+    <span class="p">)</span>
+    <span class="n">cobi_data</span><span class="p">:</span> <span class="n">CompleteCohp</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;pymatgen CompleteCohp object with COBI data&quot;</span>
+    <span class="p">)</span>
+    <span class="n">dos</span><span class="p">:</span> <span class="n">LobsterCompleteDos</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;pymatgen pymatgen.io.lobster.Doscar.completedos data&quot;</span>
+    <span class="p">)</span>
+    <span class="n">lso_dos</span><span class="p">:</span> <span class="n">LobsterCompleteDos</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;pymatgen pymatgen.io.lobster.Doscar.completedos data&quot;</span>
+    <span class="p">)</span>
+    <span class="n">madelung_energies</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Madelung energies dict from&quot;</span>
+        <span class="s2">&quot; LOBSTER based on Mulliken and Loewdin charges&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">_schema</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">__version__</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Version of atomate2 used to create the document&quot;</span><span class="p">,</span>
+        <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;schema&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<div class="viewcode-block" id="LobsterTaskDocument.from_directory"><a class="viewcode-back" href="../../../reference/atomate2.lobster.schemas.LobsterTaskDocument.html#atomate2.lobster.schemas.LobsterTaskDocument.from_directory">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="nd">@requires</span><span class="p">(</span><span class="n">Analysis</span><span class="p">,</span> <span class="s2">&quot;lobsterpy must be installed to create an LobsterTaskDocument.&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">from_directory</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">dir_name</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+        <span class="n">additional_fields</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">store_lso_dos</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">save_cohp_plots</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">plot_kwargs</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a task document from a directory containing LOBSTER files.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        dir_name : path or str</span>
+<span class="sd">            The path to the folder containing the calculation outputs.</span>
+<span class="sd">        additional_fields : dict</span>
+<span class="sd">            Dictionary of additional fields to add to output document.</span>
+<span class="sd">        store_lso_dos : bool</span>
+<span class="sd">            Whether to store the LSO DOS.</span>
+<span class="sd">        save_cohp_plots : bool</span>
+<span class="sd">            Bool to indicate whether automatic cohp plots and jsons</span>
+<span class="sd">            from lobsterpy will be generated.</span>
+<span class="sd">        plot_kwargs : dict</span>
+<span class="sd">            kwargs to change plotting options in lobsterpy.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        LobsterTaskDocument</span>
+<span class="sd">            A task document for the lobster calculation.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">additional_fields</span> <span class="o">=</span> <span class="p">{}</span> <span class="k">if</span> <span class="n">additional_fields</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">additional_fields</span>
+        <span class="n">dir_name</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">dir_name</span><span class="p">)</span>
+
+        <span class="c1"># Read in lobsterout and lobsterin</span>
+        <span class="n">lobsterout_doc</span> <span class="o">=</span> <span class="n">Lobsterout</span><span class="p">(</span><span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;lobsterout.gz&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get_doc</span><span class="p">()</span>
+        <span class="n">lobster_out</span> <span class="o">=</span> <span class="n">LobsteroutModel</span><span class="p">(</span><span class="o">**</span><span class="n">lobsterout_doc</span><span class="p">)</span>
+        <span class="n">lobster_in</span> <span class="o">=</span> <span class="n">LobsterinModel</span><span class="p">(</span><span class="o">**</span><span class="n">Lobsterin</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;lobsterin.gz&quot;</span><span class="p">))</span>
+
+        <span class="n">icohplist_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;ICOHPLIST.lobster.gz&quot;</span>
+        <span class="n">cohpcar_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;COHPCAR.lobster.gz&quot;</span>
+        <span class="n">charge_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;CHARGE.lobster.gz&quot;</span>
+        <span class="n">cobicar_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;COBICAR.lobster.gz&quot;</span>
+        <span class="n">coopcar_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;COOPCAR.lobster.gz&quot;</span>
+        <span class="n">doscar_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;DOSCAR.lobster.gz&quot;</span>
+        <span class="n">structure_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;POSCAR.gz&quot;</span>
+        <span class="n">madelung_energies_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;MadelungEnergies.lobster.gz&quot;</span>
+
+        <span class="c1"># Do automatic bonding analysis with LobsterPy</span>
+        <span class="n">condensed_bonding_analysis_data</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">sb_icobi</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">sb_icohp</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">sb_icoop</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">struct</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">describe</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">icohplist_path</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="n">cohpcar_path</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="n">charge_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="p">(</span>
+                <span class="n">condensed_bonding_analysis</span><span class="p">,</span>
+                <span class="n">struct</span><span class="p">,</span>
+                <span class="n">describe</span><span class="p">,</span>
+                <span class="n">sb_icobi</span><span class="p">,</span>
+                <span class="n">sb_icohp</span><span class="p">,</span>
+                <span class="n">sb_icoop</span><span class="p">,</span>
+            <span class="p">)</span> <span class="o">=</span> <span class="n">CondensedBondingAnalysis</span><span class="o">.</span><span class="n">from_directory</span><span class="p">(</span>
+                <span class="n">dir_name</span><span class="p">,</span> <span class="n">save_cohp_plots</span><span class="o">=</span><span class="n">save_cohp_plots</span><span class="p">,</span> <span class="n">plot_kwargs</span><span class="o">=</span><span class="n">plot_kwargs</span>
+            <span class="p">)</span>
+
+        <span class="c1"># Read in charges</span>
+        <span class="n">charges</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">charge_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">charge</span> <span class="o">=</span> <span class="n">Charge</span><span class="p">(</span><span class="n">charge_path</span><span class="p">)</span>
+            <span class="n">charges</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Mulliken&quot;</span><span class="p">:</span> <span class="n">charge</span><span class="o">.</span><span class="n">Mulliken</span><span class="p">,</span> <span class="s2">&quot;Loewdin&quot;</span><span class="p">:</span> <span class="n">charge</span><span class="o">.</span><span class="n">Loewdin</span><span class="p">}</span>
+
+        <span class="c1"># Read in COHP, COBI, COOP plots</span>
+        <span class="n">cohp_obj</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">cohpcar_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">cohp_obj</span> <span class="o">=</span> <span class="n">CompleteCohp</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span>
+                <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;LOBSTER&quot;</span><span class="p">,</span>
+                <span class="n">structure_file</span><span class="o">=</span><span class="n">structure_path</span><span class="p">,</span>
+                <span class="n">filename</span><span class="o">=</span><span class="n">cohpcar_path</span><span class="p">,</span>
+                <span class="n">are_coops</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">are_cobis</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="n">coop_obj</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">coopcar_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">coop_obj</span> <span class="o">=</span> <span class="n">CompleteCohp</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span>
+                <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;LOBSTER&quot;</span><span class="p">,</span>
+                <span class="n">structure_file</span><span class="o">=</span><span class="n">structure_path</span><span class="p">,</span>
+                <span class="n">filename</span><span class="o">=</span><span class="n">coopcar_path</span><span class="p">,</span>
+                <span class="n">are_coops</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">are_cobis</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="n">cobi_obj</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">cobicar_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">cobi_obj</span> <span class="o">=</span> <span class="n">CompleteCohp</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span>
+                <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;LOBSTER&quot;</span><span class="p">,</span>
+                <span class="n">structure_file</span><span class="o">=</span><span class="n">structure_path</span><span class="p">,</span>
+                <span class="n">filename</span><span class="o">=</span><span class="n">cobicar_path</span><span class="p">,</span>
+                <span class="n">are_coops</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">are_cobis</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="c1"># Read in DOS</span>
+        <span class="n">dos</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">doscar_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">doscar_lobster</span> <span class="o">=</span> <span class="n">Doscar</span><span class="p">(</span>
+                <span class="n">doscar</span><span class="o">=</span><span class="s2">&quot;DOSCAR.lobster.gz&quot;</span><span class="p">,</span> <span class="n">structure_file</span><span class="o">=</span><span class="s2">&quot;POSCAR.gz&quot;</span>
+            <span class="p">)</span>
+            <span class="n">dos</span> <span class="o">=</span> <span class="n">doscar_lobster</span><span class="o">.</span><span class="n">completedos</span>
+
+        <span class="c1"># Read in LSO DOS</span>
+        <span class="n">lso_dos</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">doscar_lso_path</span> <span class="o">=</span> <span class="n">dir_name</span> <span class="o">/</span> <span class="s2">&quot;DOSCAR.LSO.lobster&quot;</span>
+        <span class="k">if</span> <span class="n">store_lso_dos</span> <span class="ow">and</span> <span class="n">doscar_lso_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">doscar_lso_lobster</span> <span class="o">=</span> <span class="n">Doscar</span><span class="p">(</span>
+                <span class="n">doscar</span><span class="o">=</span><span class="n">doscar_lso_path</span><span class="p">,</span> <span class="n">structure_file</span><span class="o">=</span><span class="n">structure_path</span>
+            <span class="p">)</span>
+            <span class="n">lso_dos</span> <span class="o">=</span> <span class="n">doscar_lso_lobster</span><span class="o">.</span><span class="n">completedos</span>
+
+        <span class="c1"># Read in Madelung energies</span>
+        <span class="n">madelung_energies</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">madelung_energies_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">madelung_obj</span> <span class="o">=</span> <span class="n">MadelungEnergies</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">madelung_energies_path</span><span class="p">)</span>
+
+            <span class="n">madelung_energies</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;Mulliken&quot;</span><span class="p">:</span> <span class="n">madelung_obj</span><span class="o">.</span><span class="n">madelungenergies_Mulliken</span><span class="p">,</span>
+                <span class="s2">&quot;Loewdin&quot;</span><span class="p">:</span> <span class="n">madelung_obj</span><span class="o">.</span><span class="n">madelungenergies_Loewdin</span><span class="p">,</span>
+                <span class="s2">&quot;Ewald_splitting&quot;</span><span class="p">:</span> <span class="n">madelung_obj</span><span class="o">.</span><span class="n">ewald_splitting</span><span class="p">,</span>
+            <span class="p">}</span>
+
+        <span class="n">doc</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">structure</span><span class="o">=</span><span class="n">struct</span><span class="p">,</span>
+            <span class="n">dir_name</span><span class="o">=</span><span class="n">dir_name</span><span class="p">,</span>
+            <span class="n">lobsterin</span><span class="o">=</span><span class="n">lobster_in</span><span class="p">,</span>
+            <span class="n">lobsterout</span><span class="o">=</span><span class="n">lobster_out</span><span class="p">,</span>
+            <span class="n">lobsterpy_data</span><span class="o">=</span><span class="n">condensed_bonding_analysis_data</span><span class="p">,</span>
+            <span class="n">lobsterpy_summary_text</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">describe</span><span class="o">.</span><span class="n">text</span><span class="p">),</span>
+            <span class="n">strongest_bonds_icohp</span><span class="o">=</span><span class="n">sb_icohp</span><span class="p">,</span>
+            <span class="n">strongest_bonds_icoop</span><span class="o">=</span><span class="n">sb_icoop</span><span class="p">,</span>
+            <span class="n">strongest_bonds_icobi</span><span class="o">=</span><span class="n">sb_icobi</span><span class="p">,</span>
+            <span class="n">cohp_data</span><span class="o">=</span><span class="n">cohp_obj</span><span class="p">,</span>
+            <span class="n">coop_data</span><span class="o">=</span><span class="n">coop_obj</span><span class="p">,</span>
+            <span class="n">cobi_data</span><span class="o">=</span><span class="n">cobi_obj</span><span class="p">,</span>
+            <span class="n">dos</span><span class="o">=</span><span class="n">dos</span><span class="p">,</span>
+            <span class="n">lso_dos</span><span class="o">=</span><span class="n">lso_dos</span><span class="p">,</span>
+            <span class="n">charges</span><span class="o">=</span><span class="n">charges</span><span class="p">,</span>
+            <span class="n">madelung_energies</span><span class="o">=</span><span class="n">madelung_energies</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">doc</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">update</span><span class="o">=</span><span class="n">additional_fields</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">doc</span></div></div>
+
+
+<span class="k">def</span> <span class="nf">_identify_strongest_bonds</span><span class="p">(</span>
+    <span class="n">analyse</span><span class="p">:</span> <span class="n">Analysis</span><span class="p">,</span>
+    <span class="n">icobilist_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span>
+    <span class="n">icohplist_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span>
+    <span class="n">icooplist_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Identify the strongest bonds and convert them into StrongestBonds objects.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    analyse : .Analysis</span>
+<span class="sd">        Analysis object from lobsterpy automatic analysis</span>
+<span class="sd">    icobilist_path : Path or str</span>
+<span class="sd">        Path to ICOBILIST.lobster</span>
+<span class="sd">    icohplist_path : Path or str</span>
+<span class="sd">        Path to ICOHPLIST.lobster</span>
+<span class="sd">    icooplist_path : Path or str</span>
+<span class="sd">        Path to ICOOPLIST.lobster</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Tuple[StrongestBonds]</span>
+<span class="sd">        Tuple of StrongestBonds</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="n">icohplist_path</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">icobilist_path</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">icooplist_path</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">file</span><span class="p">,</span> <span class="n">are_cobis</span><span class="p">,</span> <span class="n">are_coops</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">icohplist</span> <span class="o">=</span> <span class="n">Icohplist</span><span class="p">(</span>
+                <span class="n">filename</span><span class="o">=</span><span class="n">icohplist_path</span><span class="p">,</span>
+                <span class="n">are_cobis</span><span class="o">=</span><span class="n">are_cobis</span><span class="p">,</span>
+                <span class="n">are_coops</span><span class="o">=</span><span class="n">are_coops</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">bond_dict</span> <span class="o">=</span> <span class="n">_get_strong_bonds</span><span class="p">(</span>
+                <span class="n">icohplist</span><span class="o">.</span><span class="n">icohpcollection</span><span class="o">.</span><span class="n">as_dict</span><span class="p">(),</span>
+                <span class="n">relevant_bonds</span><span class="o">=</span><span class="n">analyse</span><span class="o">.</span><span class="n">final_dict_bonds</span><span class="p">,</span>
+                <span class="n">are_cobis</span><span class="o">=</span><span class="n">are_cobis</span><span class="p">,</span>
+                <span class="n">are_coops</span><span class="o">=</span><span class="n">are_coops</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">StrongestBonds</span><span class="p">(</span>
+                    <span class="n">are_cobis</span><span class="o">=</span><span class="n">are_cobis</span><span class="p">,</span>
+                    <span class="n">are_coops</span><span class="o">=</span><span class="n">are_coops</span><span class="p">,</span>
+                    <span class="n">strongest_bonds</span><span class="o">=</span><span class="n">bond_dict</span><span class="p">,</span>
+                    <span class="n">which_bonds</span><span class="o">=</span><span class="n">analyse</span><span class="o">.</span><span class="n">whichbonds</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">output</span>
+
+
+<span class="k">def</span> <span class="nf">_get_strong_bonds</span><span class="p">(</span>
+    <span class="n">bondlist</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">are_cobis</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">are_coops</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">relevant_bonds</span><span class="p">:</span> <span class="nb">dict</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Identify the strongest bonds from a list of bonds.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    bondlist : dict</span>
+<span class="sd">        dict including bonding information</span>
+<span class="sd">    are_cobis : bool</span>
+<span class="sd">        True if these are cobis</span>
+<span class="sd">    are_coops : bool</span>
+<span class="sd">        True if these are coops</span>
+<span class="sd">    relevant_bonds : dict</span>
+<span class="sd">        Dict include all bonds that are considered.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    dict</span>
+<span class="sd">        Dictionary including strongest bonds.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bonds</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">icohp_all</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">lengths</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span>
+        <span class="n">bondlist</span><span class="p">[</span><span class="s2">&quot;list_atom1&quot;</span><span class="p">],</span>
+        <span class="n">bondlist</span><span class="p">[</span><span class="s2">&quot;list_atom2&quot;</span><span class="p">],</span>
+        <span class="n">bondlist</span><span class="p">[</span><span class="s2">&quot;list_icohp&quot;</span><span class="p">],</span>
+        <span class="n">bondlist</span><span class="p">[</span><span class="s2">&quot;list_length&quot;</span><span class="p">],</span>
+    <span class="p">):</span>
+        <span class="n">bonds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;0123456789&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s2">&quot;0123456789&quot;</span><span class="p">))</span>
+        <span class="n">icohp_all</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+        <span class="n">lengths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+
+    <span class="n">bond_labels_unique</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">bonds</span><span class="p">))</span>
+    <span class="n">sep_icohp</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bond_labels_unique</span><span class="p">))]</span>
+    <span class="n">sep_lengths</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bond_labels_unique</span><span class="p">))]</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bond_labels_unique</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">val2</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bonds</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="n">val2</span><span class="p">:</span>
+                <span class="n">sep_icohp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">icohp_all</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                <span class="n">sep_lengths</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lengths</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="n">are_cobis</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">are_coops</span><span class="p">:</span>
+        <span class="n">prop</span> <span class="o">=</span> <span class="s2">&quot;ICOBI&quot;</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="n">are_cobis</span> <span class="ow">and</span> <span class="n">are_coops</span><span class="p">:</span>
+        <span class="n">prop</span> <span class="o">=</span> <span class="s2">&quot;ICOOP&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">prop</span> <span class="o">=</span> <span class="s2">&quot;ICOHP&quot;</span>
+
+    <span class="n">bond_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">lab</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bond_labels_unique</span><span class="p">):</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="n">lab</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+        <span class="n">label</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">rel_bnd</span> <span class="ow">in</span> <span class="n">relevant_bonds</span><span class="p">:</span>
+            <span class="n">rel_bnd_list</span> <span class="o">=</span> <span class="n">rel_bnd</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+            <span class="n">rel_bnd_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">label</span> <span class="o">==</span> <span class="n">rel_bnd_list</span><span class="p">:</span>
+                <span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">sep_icohp</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                <span class="n">bond_dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+                    <span class="p">{</span>
+                        <span class="n">rel_bnd</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="n">prop</span><span class="p">:</span> <span class="nb">min</span><span class="p">(</span><span class="n">sep_icohp</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span>
+                            <span class="s2">&quot;length&quot;</span><span class="p">:</span> <span class="n">sep_lengths</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">index</span><span class="p">],</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">)</span>
+    <span class="k">return</span> <span class="n">bond_dict</span>
+</pre></div>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the Materials Project
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2022.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>
