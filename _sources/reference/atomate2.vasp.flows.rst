@@ -43,5 +43,6 @@ atomate2.vasp.flows
    atomate2.vasp.flows.defect
    atomate2.vasp.flows.elastic
    atomate2.vasp.flows.elph
+   atomate2.vasp.flows.lobster
    atomate2.vasp.flows.phonons
 

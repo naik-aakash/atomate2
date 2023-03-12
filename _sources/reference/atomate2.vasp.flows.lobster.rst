@@ -1,0 +1,46 @@
+atomate2.vasp.flows.lobster
+===========================
+
+.. automodule:: atomate2.vasp.flows.lobster
+
+   
+
+
+
+   
+
+
+
+   
+
+
+
+   
+      
+   
+   
+   
+   
+   
+   
+   
+   
+
+
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      VaspLobsterMaker
+
+
+
+
+   
+   
+   
+
+
+

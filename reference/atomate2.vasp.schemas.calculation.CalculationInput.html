@@ -572,6 +572,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.defect.html">atomate2.vasp.flows.defect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.elastic.html">atomate2.vasp.flows.elastic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.elph.html">atomate2.vasp.flows.elph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.lobster.html">atomate2.vasp.flows.lobster</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.phonons.html">atomate2.vasp.flows.phonons</a></li>
 </ul>
 </li>
@@ -582,6 +583,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.defect.html">atomate2.vasp.jobs.defect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.elastic.html">atomate2.vasp.jobs.elastic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.elph.html">atomate2.vasp.jobs.elph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.lobster.html">atomate2.vasp.jobs.lobster</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.phonons.html">atomate2.vasp.jobs.phonons</a></li>
 </ul>
 </li>
@@ -612,6 +614,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.sets.base.html">atomate2.vasp.sets.base</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.sets.core.html">atomate2.vasp.sets.core</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.sets.defect.html">atomate2.vasp.sets.defect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.sets.lobster.html">atomate2.vasp.sets.lobster</a></li>
 </ul>
 </li>
 </ul>
@@ -847,13 +850,13 @@ title="Print to PDF"
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="atomate2.vasp.schemas.calculation.CalculationInput.lattice_rec">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lattice_rec</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://pymatgen.org/pymatgen.core.lattice.html#pymatgen.core.lattice.Lattice" title="(in pymatgen v2023.2.28)"><span class="pre">Lattice</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#atomate2.vasp.schemas.calculation.CalculationInput.lattice_rec" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lattice_rec</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://pymatgen.org/pymatgen.core.lattice.html#pymatgen.core.lattice.Lattice" title="(in pymatgen v2023.3.10)"><span class="pre">Lattice</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#atomate2.vasp.schemas.calculation.CalculationInput.lattice_rec" title="Permalink to this definition">#</a></dt>
 <dd><p>Reciprocal lattice of the structure</p>
 </dd></dl>
 
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="atomate2.vasp.schemas.calculation.CalculationInput.structure">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">structure</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://pymatgen.org/pymatgen.core.structure.html#pymatgen.core.structure.Structure" title="(in pymatgen v2023.2.28)"><span class="pre">Structure</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#atomate2.vasp.schemas.calculation.CalculationInput.structure" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">structure</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://pymatgen.org/pymatgen.core.structure.html#pymatgen.core.structure.Structure" title="(in pymatgen v2023.3.10)"><span class="pre">Structure</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#atomate2.vasp.schemas.calculation.CalculationInput.structure" title="Permalink to this definition">#</a></dt>
 <dd><p>Input structure for the calculation</p>
 </dd></dl>
 
@@ -871,7 +874,7 @@ title="Print to PDF"
 
 <dl class="py method">
 <dt class="sig sig-object py" id="atomate2.vasp.schemas.calculation.CalculationInput.from_vasprun">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_vasprun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vasprun</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pymatgen.org/pymatgen.io.vasp.outputs.html#pymatgen.io.vasp.outputs.Vasprun" title="(in pymatgen v2023.2.28)"><span class="pre">Vasprun</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#atomate2.vasp.schemas.calculation.CalculationInput" title="atomate2.vasp.schemas.calculation.CalculationInput"><span class="pre">CalculationInput</span></a></span></span><a class="reference internal" href="../_modules/atomate2/vasp/schemas/calculation.html#CalculationInput.from_vasprun"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#atomate2.vasp.schemas.calculation.CalculationInput.from_vasprun" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_vasprun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vasprun</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pymatgen.org/pymatgen.io.vasp.outputs.html#pymatgen.io.vasp.outputs.Vasprun" title="(in pymatgen v2023.3.10)"><span class="pre">Vasprun</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#atomate2.vasp.schemas.calculation.CalculationInput" title="atomate2.vasp.schemas.calculation.CalculationInput"><span class="pre">CalculationInput</span></a></span></span><a class="reference internal" href="../_modules/atomate2/vasp/schemas/calculation.html#CalculationInput.from_vasprun"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#atomate2.vasp.schemas.calculation.CalculationInput.from_vasprun" title="Permalink to this definition">#</a></dt>
 <dd><p>Create a VASP input document from a Vasprun object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>

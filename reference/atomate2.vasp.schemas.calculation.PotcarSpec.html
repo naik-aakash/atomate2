@@ -572,6 +572,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.defect.html">atomate2.vasp.flows.defect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.elastic.html">atomate2.vasp.flows.elastic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.elph.html">atomate2.vasp.flows.elph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.lobster.html">atomate2.vasp.flows.lobster</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.phonons.html">atomate2.vasp.flows.phonons</a></li>
 </ul>
 </li>
@@ -582,6 +583,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.defect.html">atomate2.vasp.jobs.defect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.elastic.html">atomate2.vasp.jobs.elastic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.elph.html">atomate2.vasp.jobs.elph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.lobster.html">atomate2.vasp.jobs.lobster</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.phonons.html">atomate2.vasp.jobs.phonons</a></li>
 </ul>
 </li>
@@ -612,6 +614,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.sets.base.html">atomate2.vasp.sets.base</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.sets.core.html">atomate2.vasp.sets.core</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.sets.defect.html">atomate2.vasp.sets.defect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.sets.lobster.html">atomate2.vasp.sets.lobster</a></li>
 </ul>
 </li>
 </ul>
@@ -817,7 +820,7 @@ title="Print to PDF"
 
 <dl class="py method">
 <dt class="sig sig-object py" id="atomate2.vasp.schemas.calculation.PotcarSpec.from_potcar_single">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_potcar_single</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">potcar_single</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pymatgen.org/pymatgen.io.vasp.inputs.html#pymatgen.io.vasp.inputs.PotcarSingle" title="(in pymatgen v2023.2.28)"><span class="pre">PotcarSingle</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#atomate2.vasp.schemas.calculation.PotcarSpec" title="atomate2.vasp.schemas.calculation.PotcarSpec"><span class="pre">PotcarSpec</span></a></span></span><a class="reference internal" href="../_modules/atomate2/vasp/schemas/calculation.html#PotcarSpec.from_potcar_single"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#atomate2.vasp.schemas.calculation.PotcarSpec.from_potcar_single" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_potcar_single</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">potcar_single</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pymatgen.org/pymatgen.io.vasp.inputs.html#pymatgen.io.vasp.inputs.PotcarSingle" title="(in pymatgen v2023.3.10)"><span class="pre">PotcarSingle</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#atomate2.vasp.schemas.calculation.PotcarSpec" title="atomate2.vasp.schemas.calculation.PotcarSpec"><span class="pre">PotcarSpec</span></a></span></span><a class="reference internal" href="../_modules/atomate2/vasp/schemas/calculation.html#PotcarSpec.from_potcar_single"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#atomate2.vasp.schemas.calculation.PotcarSpec.from_potcar_single" title="Permalink to this definition">#</a></dt>
 <dd><p>Get a PotcarSpec from a PotcarSingle.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -837,7 +840,7 @@ title="Print to PDF"
 
 <dl class="py method">
 <dt class="sig sig-object py" id="atomate2.vasp.schemas.calculation.PotcarSpec.from_potcar">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_potcar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">potcar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pymatgen.org/pymatgen.io.vasp.inputs.html#pymatgen.io.vasp.inputs.Potcar" title="(in pymatgen v2023.2.28)"><span class="pre">Potcar</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#atomate2.vasp.schemas.calculation.PotcarSpec" title="atomate2.vasp.schemas.calculation.PotcarSpec"><span class="pre">PotcarSpec</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/atomate2/vasp/schemas/calculation.html#PotcarSpec.from_potcar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#atomate2.vasp.schemas.calculation.PotcarSpec.from_potcar" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_potcar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">potcar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://pymatgen.org/pymatgen.io.vasp.inputs.html#pymatgen.io.vasp.inputs.Potcar" title="(in pymatgen v2023.3.10)"><span class="pre">Potcar</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.List" title="(in Python v3.8)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#atomate2.vasp.schemas.calculation.PotcarSpec" title="atomate2.vasp.schemas.calculation.PotcarSpec"><span class="pre">PotcarSpec</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/atomate2/vasp/schemas/calculation.html#PotcarSpec.from_potcar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#atomate2.vasp.schemas.calculation.PotcarSpec.from_potcar" title="Permalink to this definition">#</a></dt>
 <dd><p>Get a list of PotcarSpecs from a Potcar.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>

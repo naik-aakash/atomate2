@@ -572,6 +572,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.defect.html">atomate2.vasp.flows.defect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.elastic.html">atomate2.vasp.flows.elastic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.elph.html">atomate2.vasp.flows.elph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.lobster.html">atomate2.vasp.flows.lobster</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.flows.phonons.html">atomate2.vasp.flows.phonons</a></li>
 </ul>
 </li>
@@ -582,6 +583,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.defect.html">atomate2.vasp.jobs.defect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.elastic.html">atomate2.vasp.jobs.elastic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.elph.html">atomate2.vasp.jobs.elph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.lobster.html">atomate2.vasp.jobs.lobster</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.jobs.phonons.html">atomate2.vasp.jobs.phonons</a></li>
 </ul>
 </li>
@@ -612,6 +614,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.sets.base.html">atomate2.vasp.sets.base</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.sets.core.html">atomate2.vasp.sets.core</a></li>
 <li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.sets.defect.html">atomate2.vasp.sets.defect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="atomate2.vasp.sets.lobster.html">atomate2.vasp.sets.lobster</a></li>
 </ul>
 </li>
 </ul>
@@ -805,7 +808,7 @@ title="Print to PDF"
 <dd><p>Summary of the outputs for a VASP calculation.</p>
 <dl class="py attribute pydantic_field">
 <dt class="sig sig-object py" id="atomate2.vasp.schemas.task.OutputSummary.structure">
-<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">structure</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://pymatgen.org/pymatgen.core.structure.html#pymatgen.core.structure.Structure" title="(in pymatgen v2023.2.28)"><span class="pre">Structure</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#atomate2.vasp.schemas.task.OutputSummary.structure" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">structure</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://pymatgen.org/pymatgen.core.structure.html#pymatgen.core.structure.Structure" title="(in pymatgen v2023.3.10)"><span class="pre">Structure</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#atomate2.vasp.schemas.task.OutputSummary.structure" title="Permalink to this definition">#</a></dt>
 <dd><p>The output structure object</p>
 </dd></dl>
 
@@ -841,7 +844,7 @@ title="Print to PDF"
 
 <dl class="py method">
 <dt class="sig sig-object py" id="atomate2.vasp.schemas.task.OutputSummary.from_vasp_calc_doc">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_vasp_calc_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calc_doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="atomate2.vasp.schemas.calculation.Calculation.html#atomate2.vasp.schemas.calculation.Calculation" title="atomate2.vasp.schemas.calculation.Calculation"><span class="pre">Calculation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">trajectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.Optional" title="(in Python v3.8)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://pymatgen.org/pymatgen.core.trajectory.html#pymatgen.core.trajectory.Trajectory" title="(in pymatgen v2023.2.28)"><span class="pre">Trajectory</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#atomate2.vasp.schemas.task.OutputSummary" title="atomate2.vasp.schemas.task.OutputSummary"><span class="pre">OutputSummary</span></a></span></span><a class="reference internal" href="../_modules/atomate2/vasp/schemas/task.html#OutputSummary.from_vasp_calc_doc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#atomate2.vasp.schemas.task.OutputSummary.from_vasp_calc_doc" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_vasp_calc_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calc_doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="atomate2.vasp.schemas.calculation.Calculation.html#atomate2.vasp.schemas.calculation.Calculation" title="atomate2.vasp.schemas.calculation.Calculation"><span class="pre">Calculation</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">trajectory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.8/library/typing.html#typing.Optional" title="(in Python v3.8)"><span class="pre">Optional</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://pymatgen.org/pymatgen.core.trajectory.html#pymatgen.core.trajectory.Trajectory" title="(in pymatgen v2023.3.10)"><span class="pre">Trajectory</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#atomate2.vasp.schemas.task.OutputSummary" title="atomate2.vasp.schemas.task.OutputSummary"><span class="pre">OutputSummary</span></a></span></span><a class="reference internal" href="../_modules/atomate2/vasp/schemas/task.html#OutputSummary.from_vasp_calc_doc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#atomate2.vasp.schemas.task.OutputSummary.from_vasp_calc_doc" title="Permalink to this definition">#</a></dt>
 <dd><p>Create a summary of VASP calculation outputs from a VASP calculation document.</p>
 <p>This will first look for ionic steps in the calculation document. If found, will
 use it and ignore the trajectory. I not, will get ionic steps from the

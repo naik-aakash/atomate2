@@ -44,5 +44,6 @@ atomate2.vasp.jobs
    atomate2.vasp.jobs.defect
    atomate2.vasp.jobs.elastic
    atomate2.vasp.jobs.elph
+   atomate2.vasp.jobs.lobster
    atomate2.vasp.jobs.phonons
 
